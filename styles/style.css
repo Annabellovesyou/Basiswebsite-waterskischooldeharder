@@ -1,0 +1,62 @@
+@font-face {
+	font-family: "huistypografiebold";
+	src: url("../fonts/Helvetica-Bold.ttf");
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "huistypografietekst";
+	src: url("../fonts/Helvetica.ttf");
+}
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+
+/* afbeeldingen coach */
+
+section:nth-of-type(1) {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2em;
+	justify-content: center;
+	margin-bottom: 5em;
+}
+
+section:nth-of-type(1)>img {
+	width: 23%;
+}
+
+/* kaarten */
+
+main ul {
+	display: flex;
+	justify-content: center;
+	gap: 2em;
+	margin: 1.5em 14em 0 1em;
+	padding: 0;
+	list-style: none;
+
+}
+
+main li {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	width: 20em;
+	background-color: var(--huiskleurwit);
+	border-radius: 0.8em;
+	box-shadow: 0.2em 0.1em 0.3em var(--lichtehuiskleurblauw);
+	overflow: hidden;
+	background-color: var(--huiskleurwit);
+	border-radius: 0.8em;
+	box-shadow: 0.2em 0.1em 0.3em var(--lichtehuiskleurblauw);
+}
+
+ul h2 {
+	font-size: 1.25em;
+	line-height: 1.1em;
+	padding-bottom: 1em;
+	margin: 1.2em 0 0 1em;
+	tex

@@ -1,0 +1,148 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+    --color-text: #111;
+    --color-background: #f4f9ff;
+    --huiskleurblauw: #2F75DC;
+    --huiskleurwit: #FFFFFF;
+    --h3kleur: #6da5f9;
+
+    --color-text: #111;
+    --color-background: #f4f9ff;
+    --huiskleurblauw: #2F75DC;
+    --lichtehuiskleurblauw: #2f74dc92;
+    --huiskleurwit: #FFFFFF;
+    --h3kleur: #6da5f9;
+}
+
+@font-face {
+    font-family: "nieuwehuisstijl";
+    src: url("../fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ\(3\).woff2");
+}
+
+@font-face {
+    font-family: "huistypografiebold";
+    src: url("../fonts/Helvetica-Bold.ttf");
+    font-weight: bold;
+}
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+
+/* menu button */
+
+button {
+    appearance:none;
+    
+    width:2.5em;
+    aspect-ratio:1/1;
+    
+    background-color:gold;
+    border:none;
+    
+    display:grid;
+    justify-items:center;
+    align-items:center;
+    padding:0;
+  }
+  
+  button span {
+    display:block;
+    
+    width: 1.5em;
+    height:.1em;
+    background-color:black;
+    
+    grid-row-start: 1;
+    grid-column-start:1;
+    
+    transition:.2s;
+    
+  }
+  
+  button span:nth-of-type(1) {
+   translate: 0 -.3em; 
+  }
+  
+  button span:nth-of-type(2) {
+  
+  }
+  
+  button span:nth-of-type(3) {
+    translate: 0 .3em;
+  }
+  
+  
+  
+  button.is-open span:nth-of-type(1) {
+   translate: 0 0;
+    rotate: 45deg;
+  }
+  
+  button.is-open span:nth-of-type(2) {
+  scale: 0 1;
+  }
+  
+  button.is-open span:nth-of-type(3) {
+    translate: 0 0;
+    rotate: -45deg;
+  }
+  
+  
+ 
+
+
+
+
+
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap: 3em;
+    flex-wrap: wrap;
+    
+}
+
+nav ul a {
+    color: var(--color-text);
+}
+
+@media (max-width: 51em) {
+header nav li{
+    display:none;
+}
+}
+
+@media (min-width: 51em) {
+    header button{
+        display:none;
+    }
+}
+
+
+/* body, headings */
+
+body {
+    font-family: "huistypografietekst";
+    background-color: var(--color-background);
+}
+/* 
+body p {
+    font-size: 1.3em;
+    line-height: 1.5em;
+    text-al
