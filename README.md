@@ -22,7 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Rood
 
   #### Je focus:
-  Surface plane
+  Responsiveness
  
 </details>
 
@@ -59,6 +59,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  - De startpagina heeft geen H1, 9 keer een h2 en een h3 in de footer. De screenreader leest eerst het navigatie menu en de video's, maar niet de hoofdtekst. 
+  - De 'prijzen' pagina heeft een H2 en een H3, echter staan er eerst een hoop tabellen, en pas onderaan een H2. De footer is een H3. De tabellen missen dus een kop met bijvoorbeeld 'tarieven' en subkopjes.
+  - de 'contact opnemen' pagina heeft geen koppen, enkel weer de H3 in de footer. Hier is behoefte aan meerdere logische koppen. 
+
+  Wat er ook mist bij elke pagina, is een duidelijk visueel onderscheid van de koppen, ook voor mensen zonder beperking is het niet duidelijk.
 
 </details>
 
@@ -70,10 +75,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/breakdown-home.png" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/breakdown-prijzen.png" width="375px" alt="breakdown van prijzenpagina">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
@@ -96,12 +101,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
+  | Jada                                         | Daniel                           | Sid                                 |   Annabel        |
+  | ---                                          | ---                              | ---                                 | ---              |
+  | - hoe tekst meer naar links                  | - meerdere hamburger menu's      | - hoe advertenties                  | - hamburger menu |
+  | - kan svg niet vinden | dit als er tijd is   | - font face werkt niet           | - achtergrond zoals echte website   | - nav meeschalen
+  | - hoe order aanpassen van h2 en h3           | - video aan zijkanten vervagen   | - zoekbalk                          | - witruimte tekst|
+                                                                                                                  
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
