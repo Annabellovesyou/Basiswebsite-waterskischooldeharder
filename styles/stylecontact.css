@@ -1,0 +1,29 @@
+*, *::after, *::before {
+    box-sizing:border-box;  
+  }
+  
+  
+@font-face {
+    font-family: "nieuwehuisstijl";
+    src: url("../fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ\(3\).woff2");
+}
+
+@font-face {
+    font-family: "huistypografiebold";
+    src: url("../fonts/Helvetica-Bold.ttf");
+    font-weight: bold;
+}
+  
+  
+:root {
+  --color-text: #111;
+  --color-background: #f4f9ff;
+  --huiskleurblauw: #2F75DC;
+  --lichtehuiskleurblauw: #2f74dc92;
+  --huiskleurwit: #FFFFFF;
+  --h3kleur: #6da5f9;
+  --donkerehuiskleurblauw: #2258aa;
+  --nogdonkerehuiskleurblauw: #183f7b;
+}
+
+ 

@@ -15,26 +15,25 @@
     --color-text: #111;
     --color-background: #f4f9ff;
     --huiskleurblauw: #2F75DC;
-    --huiskleurwit: #FFFFFF;
-    --h3kleur: #6da5f9;
-
-    --color-text: #111;
-    --color-background: #f4f9ff;
-    --huiskleurblauw: #2F75DC;
     --lichtehuiskleurblauw: #2f74dc92;
     --huiskleurwit: #FFFFFF;
     --h3kleur: #6da5f9;
+    --donkerehuiskleurblauw: #2258aa;
+    --nogdonkerehuiskleurblauw: #183f7b;
+    --gelehuiskleur: #fff316;
 }
 
-@font-face {
-    font-family: "nieuwehuisstijl";
-    src: url("../fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ\(3\).woff2");
-}
 
 @font-face {
-    font-family: "huistypografiebold";
-    src: url("../fonts/Helvetica-Bold.ttf");
+    font-family:"amaranth";
+    src: url("../fonts/Amaranth-Bold.woff");
     font-weight: bold;
+}
+
+@font-face {
+    font-family: "amaranthregular";
+    src: url("../fonts/Amaranth-Regular.woff");
+    font-weight:normal;
 }
 
 
@@ -43,97 +42,145 @@
 /****************/
 
 
-/* menu button */
+header img:nth-of-type(1) {
 
-button {
-    appearance:none;
-    
-    width:2.5em;
-    aspect-ratio:1/1;
-    
-    background-color:gold;
-    border:none;
-    
-    display:grid;
-    justify-items:center;
-    align-items:center;
-    padding:0;
-  }
-  
-  button span {
-    display:block;
-    
-    width: 1.5em;
-    height:.1em;
-    background-color:black;
-    
-    grid-row-start: 1;
-    grid-column-start:1;
-    
-    transition:.2s;
-    
-  }
-  
-  button span:nth-of-type(1) {
-   translate: 0 -.3em; 
-  }
-  
-  button span:nth-of-type(2) {
-  
-  }
-  
-  button span:nth-of-type(3) {
-    translate: 0 .3em;
-  }
-  
-  
-  
-  button.is-open span:nth-of-type(1) {
-   translate: 0 0;
-    rotate: 45deg;
-  }
-  
-  button.is-open span:nth-of-type(2) {
-  scale: 0 1;
-  }
-  
-  button.is-open span:nth-of-type(3) {
-    translate: 0 0;
-    rotate: -45deg;
-  }
-  
-  
- 
-
-
-
-
-
-
-nav ul{
-    display:flex;
-    list-style:none;
-    gap: 3em;
-    flex-wrap: wrap;
-    
+width:100%;
+height:auto;
+padding-bottom: 3em;
 }
 
-nav ul a {
-    color: var(--color-text);
+/* Witruimte zijkant van pagina */
+
+main {
+    padding-inline:1.5em;
 }
 
-@media (max-width: 51em) {
-header nav li{
-    display:none;
-}
-}
-
-@media (min-width: 51em) {
-    header button{
-        display:none;
+@media (min-width: 40em) {
+    main {
+        padding-inline: 2em;
     }
 }
 
+main p {
+    margin-bottom: 5em;
+    max-width:54rem;
+}
+
+main section {
+    margin-bottom: 5em;
+}
+
+nav ul {
+    position: sticky;
+    top:0;
+}
+
+/* Hamburger menu*/
+
+
+nav {
+    display: flex;
+    justify-content: center;
+  
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    background-color: var(--color-background);
+    translate: -100% 0;
+    transition: .5s;
+
+    z-index: 1;
+}
+
+nav.is-open {
+    translate: 0 0;
+    font-size: 1.5em;
+    line-height: 3em;
+}
+
+/* stijling van de a'tjes */
+
+nav ul a {
+    color: var(--color-text);
+    font-family: "amaranthregular";
+    color: var(--donkerehuiskleurblauw);
+    text-decoration: none;
+}
+
+nav ul a:hover {
+    text-decoration: underline .2em var(--nogdonkerehuiskleurblauw);
+    text-underline-offset: .5em;
+    color: var(--nogdonkerehuiskleurblauw); 
+}
+
+ul li {
+    list-style: none;
+}
+
+/* button stijling als hij zichtbaar is */
+
+header button {
+    appearance: none;
+
+    width: 2.5em;
+    aspect-ratio: 1/1;
+
+    background-color: var(--color-background);
+    border: none;
+    border-radius:.5em;
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding: 0;
+
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+header button span {
+    display: block;
+
+    width: 1.8em; 
+    height: 0.2em;
+    background-color: var(--nogdonkerehuiskleurblauw);
+    border-radius: 1em;
+
+    grid-row-start: 1;
+    grid-column-start: 1;
+
+    transition: .2s;
+
+}
+
+header button span:nth-of-type(1) {
+    translate: 0 -0.45em;  
+}
+
+header button span:nth-of-type(3) {
+    translate: 0 0.45em;
+}
+
+/* button stijling als er op wordt geklikt */
+
+header button.is-open span:nth-of-type(1) {
+    translate: 0 0;
+    rotate: 45deg;
+}
+
+header button.is-open span:nth-of-type(2) {
+    scale: 0 1;
+}
+
+header button.is-open span:nth-of-type(3) {
+    translate: 0 0;
+    rotate: -45deg;
+}
 
 /* body, headings */
 
@@ -141,65 +188,142 @@ body {
     font-family: "huistypografietekst";
     background-color: var(--color-background);
 }
-/* 
+
 body p {
-    font-size: 1.3em;
+    font-size: 1em;
     line-height: 1.5em;
     text-align: left;
-    margin: 0 15em 0 15em;
-    margin-bottom: 0.8em;
+    font-family: "amaranthregular";
 }
 
-
-h1,
-h2 {
-    font-family: "huistypografiebold";
-    color: var(--huiskleurblauw);
+h1, h2 {
+    font-family: "amaranth";
+    color: var(--donkerehuiskleurblauw);
     text-align: center;
-
 }
 
 h1 {
-    margin-top: 3em;
-    font-size: 2.8em;
+    font-size: 1.4em;
 }
 
 h2 {
-    font-size: 2em;
-    margin-bottom: 0.4em;
+    font-size: 1.2em;
 }
 
 h3 {
-    text-align: center;
-    font-size: 1.5em;
-    font-family: "huistypografietekst";
-    color: var(--h3kleur);
-} */
+font-size: 0.5em;
+  text-align: center;  
+  font-size: 1.2em;
+  font-family: "amaranth";
+  color: var(--donkerehuiskleurblauw);
+}
 
 
 /* footer */
 
 footer {
-    background-color: var(--huiskleurblauw);
+    background-color: var(--donkerehuiskleurblauw);
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
     margin-top: 5em;
-    padding: 5em
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    
 }
 
-footer li,
-a {
+footer li {
     color: var(--huiskleurwit);
     font-family: "huistypografietekst";
     line-height: 2em;
     list-style: none;
-    font-size: 1.2em;
+    font-size: 0.7em;
+    text-decoration: none;
+}
+
+footer a {
+    color: var(--huiskleurwit);
+    font-family: "huistypografietekst";
+    line-height: 2em;
+    list-style: none;
+    font-size: 1em;
     text-decoration: none;
 }
 
 footer h2 {
-    font-family: "huistypografiebold";
+    font-family: "Amaranth";
     color: var(--huiskleurwit);
     font-size: 2em;
 }
 
+em {
+    color: var(--gelehuiskleur);
+    font-style: normal;
+    
+}
+
+/* algemene media querys */
+
+@media (min-width: 42em) {
+    header button {
+        display: none;
+    }
+
+    header nav {
+        position: sticky;
+        top:0;
+        translate: 0;
+        background-color: var(--huiskleurwit);
+        font-size: 0.9em;
+    }
+
+    header img {
+        background: linear-gradient(var(--huiskleurwit), var(--color-background));
+    }
+
+    h1 {
+        font-size: 2.8em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 42em) and (max-width: 60em){
+    header nav ul {
+        display: flex;
+        justify-content:center;
+        font-size: 1.2em;
+        gap: 2em;
+    }
+
+    body p {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 60em) {
+    
+    header nav ul {
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.3em;
+        gap: 4em;
+    }
+
+    body p {
+        font-size: 1.2em;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+}
