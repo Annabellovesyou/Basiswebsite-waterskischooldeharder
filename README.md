@@ -81,7 +81,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/breakdown-prijzen.png" width="375px" alt="breakdown van prijzenpagina">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/Scherm­afbeelding 2025-11-28 om 10.42.00.png" width="375px" alt="breakdown van de formulieren">
 
 </details>
 
@@ -95,7 +95,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+ Het was eindelijk gelukt met het hamburger menu. Er waren later wel wat problemen: soms doet de knop het niet en zie je elementen die erachter moeten staan erdoorheen. Het eerste probleem heb ik niet opgelost, maar het tweede wel (met z-index).
+
+  <img src="readme-images/Scherm­afbeelding 2025-11-28 om 10.19.13.png" width="375px" alt="hamburger menu">
 
 
   ### Agenda voor meeting
@@ -109,17 +111,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
                                                                                                                   
 
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
-
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  Het gaat de goede kant op, maar:
+  -  Padding op de main in %'s voor spacing aan de zijkanten en evt bovenkant.
+  - Namen van stylesheets veranderen. 
+  - alt teksten beter bescrhijven.
+  - Voor losse kaartjes gebruikt het article element.  
+  - <address> element gebruiken voor adres.
 
 </details>
-
-
-
 
 
 ## Voortgang 2 (week 3)
@@ -128,17 +127,24 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+ Ik ben bijna klaar met de eerste pagina, maar ik loopt tegen wat dingen aan. Ik moet nog een logo toevoegen maar weet nog niet welke en hoe. En sommige elementen willen maar niet in het midden staan. Verder ben ik wel trots op mijn video die een play en pause button heeft nu. 
+
+
+
+  <img src="readme-images/videoscreenshot.png" width="375px" alt="video op de website">
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Jada                | Annabel                              | Sid          |
+  | ---                 | ---                                  | ---          | 
+  | - Hoe svg en link
+    naast elkaar        | - Hoe h2 in midden                   | - betere manier voor css styling    | 
+  | - hoe zwart 4kant 
+    achter time         | - hoe h2 en video in midden          | - eerst desktop en dan responsive? | 
+  | - Hoe h1 samen 
+    met nav             | - Moet het logo een svg of img zijn  | - welke dingen beter structueren?         | 
 
 
   ### Verslag van meeting
