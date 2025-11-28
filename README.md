@@ -137,14 +137,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | Jada                | Annabel                              | Sid          |
-  | ---                 | ---                                  | ---          | 
-  | - Hoe svg en link
-    naast elkaar        | - Hoe h2 in midden                   | - betere manier voor css styling    | 
-  | - hoe zwart 4kant 
-    achter time         | - hoe h2 en video in midden          | - eerst desktop en dan responsive? | 
-  | - Hoe h1 samen 
-    met nav             | - Moet het logo een svg of img zijn  | - welke dingen beter structueren?         | 
+
+  | Jada                                         | Daniel                           | Sid                                 |   Annabel          |
+  | ---                                          | ---                              | ---                                 | ---                |
+  | - hoe svg en link naast elkaar               | - x                              | - betere manier css styling         | - h2 in midden     |
+  | - hoe zwart vierkant achter time             | - x                              | - eerst desktop en dan resp.?       | - h2 en video      |
+  | - hoe h1 samen met nav                       | - x                              | - welke dingen beter structureren   | - afbeelding header|
+
 
 
   ### Verslag van meeting
