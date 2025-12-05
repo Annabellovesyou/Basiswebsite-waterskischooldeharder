@@ -149,10 +149,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - H2 in het midden lukte niet omdat ik css h3 selecteerde ipv h2.
+  - h2 en video in midden door display block en margin-inline auto.
+  - logo hoeft geen svg te zijn, mag ook img
 
 </details>
 
@@ -180,17 +179,27 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Ik ben erg trots op mijn kleine dialog waar je kan boeken (1e afbeelding). Het is alleen nog niet gelukt om het op elke pagina toe te passen.
 
+Ik heb ook een lichte en een donkere modus gemaakt. 
+
+Ik moet nu nog mijn code dubbel checken of het allemaal goed is, ik moet nog de alt tekst verbeteren en de naam van linkjes met aria-labels. Ik moet ook nog een animatie maken.
+
+  <img src="readme-images/boekenpopup.png" width="375px" alt="kleine dialog">
+
+  <img src="readme-images/wittemodus.png" width="375px" alt="witte modus">
+
+  <img src="readme-images/donkeremodus.png" width="375px" alt="donkere modus">
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+
+  | Jada                                         | Daniel                           | Sid       |   Annabel                                |
+  | ---                                          | ---                              | ---       | ---                                      |
+  | - Hoe tekst niet uit kader                   | - x                              | - x       | - Hoe laatste TD aanspreken in een tabel |
+  | - hoe omlaag scrollen bij carroussel         | - x                              | - x       | - x                                      |
+  | - hoe pijlen andere kleur                    | - x                              | - x       | - x                                      |
 
 
   ### Verslag van meeting
