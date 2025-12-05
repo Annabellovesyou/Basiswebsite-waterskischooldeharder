@@ -1,29 +1,157 @@
-*, *::after, *::before {
-    box-sizing:border-box;  
-  }
-  
-  
-@font-face {
-    font-family: "nieuwehuisstijl";
-    src: url("../fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ\(3\).woff2");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
-@font-face {
-    font-family: "huistypografiebold";
-    src: url("../fonts/Helvetica-Bold.ttf");
-    font-weight: bold;
-}
-  
-  
 :root {
   --color-text: #111;
   --color-background: #f4f9ff;
   --huiskleurblauw: #2F75DC;
   --lichtehuiskleurblauw: #2f74dc92;
   --huiskleurwit: #FFFFFF;
-  --h3kleur: #6da5f9;
+  --h3kleur: #79a0d9;
   --donkerehuiskleurblauw: #2258aa;
   --nogdonkerehuiskleurblauw: #183f7b;
+  --gelehuiskleur: #fff316;
 }
 
- 
+
+@font-face {
+  font-family: "amaranth";
+  src: url("../fonts/Amaranth-Bold.woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "amaranthregular";
+  src: url("../fonts/Amaranth-Regular.woff");
+  font-weight: normal;
+}
+
+/* styling */
+
+
+main section:nth-of-type(1) {
+  max-width: 55rem;
+  margin-inline: auto;
+}
+
+main ul {
+  font-family: "amaranthregular";
+  font-size: .8em;
+}
+
+main ul a {
+  font-size: .7em;
+}
+
+@media (min-width: 25em) {
+  main ul {
+    font-size: 1em;
+  }
+  main ul a {
+    font-size: .9em;
+  }
+}
+
+@media (min-width: 60em) {
+  main ul {
+    font-size: 1.2em;
+  }
+}
+
+main ul li {
+  list-style: square;
+  line-height: 1.8em;
+}
+
+label {
+  line-height: 2em;
+  font-family: "amaranthregular";
+  color: var(--nogdonkerehuiskleurblauw);
+}
+
+input {
+  width: 13em;
+  padding: .5em;
+  margin-bottom: 1.5em;
+  font-size: .9em;
+  font-family: "amaranthregular";
+  box-sizing: border-box;
+  border: .1em solid var(--nogdonkerehuiskleurblauw);
+  border-radius: .3em;
+}
+
+form {
+  width: 12em;
+  margin: 0 auto;
+  font-size: .9em;
+}
+
+textarea {
+  width: 12.5em;
+  border: 0.1em solid var(--nogdonkerehuiskleurblauw);
+  border-radius: .3em;
+  background-color: var(--huiskleurwit);
+  
+  font-family: "amaranthregular";
+
+  resize: none;
+
+  margin-bottom: 3em;
+}
+
+label {
+  font-size: 1em;
+}
+
+@media (min-width: 35em) {
+  input {
+  width: 25em;
+  padding: .8em;
+  font-size: 1.1em;
+  }
+
+  textarea {
+    width: 32.5em;
+  }
+
+  form {
+    width:28em;
+    margin: 0 auto;
+    font-size: 1em;
+  }
+
+}
+
+input[type=submit] {
+ cursor: pointer;
+ background-color: var(--donkerehuiskleurblauw);
+ color: var(--huiskleurwit);
+ border: none;
+}
+
+input[type=reset] {
+  cursor: pointer;
+  background-color: var(--h3kleur);
+  color: var(--huiskleurwit);
+  border: none;
+ }
+
+input[type=submit]:hover {
+  background-color: var(--nogdonkerehuiskleurblauw);
+}
+
+input[type=submit]:active {
+  translate: 0 .2em;
+}
+
+input[type=reset]:active {
+  translate: 0 .2em;
+}
+
+main a {
+  text-underline-offset: .2em;
+  color: var(--nogdonkerehuiskleurblauw);
+}

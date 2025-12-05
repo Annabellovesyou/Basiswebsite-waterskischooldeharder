@@ -23,11 +23,11 @@ function toggleVideo() {
 	
 if ( deVideo.paused === true)	{
 deVideo.play();	
-deVideoButtonImage.src = "images/pausebuttonwit.svg";
+deVideoButtonImage.src = "images/pausebutton.svg";
 deVideoButtonImage.alt = "pauzeren";
 } else {
 	deVideo.pause();
-deVideoButtonImage.src = "images/playbuttonwit.svg";
+deVideoButtonImage.src = "images/playbutton.svg";
 	deVideoButtonImage.alt = "play";
 }
 	
@@ -35,11 +35,10 @@ deVideoButtonImage.src = "images/playbuttonwit.svg";
 
 
 
-// prpbeersel
+// 4.1 zoek de button op
+const helpButton = document.querySelector("main button");
 
-const helpButton = document.querySelector("section:nth-of-type(5) button");
-
-// 4.2 zoek de help dialog op
+// 4.2 zoek de dialog op
 const helpDialog = document.querySelector("main dialog");
 
 // 4.3 als je op de klikt, open de dialog met .show()

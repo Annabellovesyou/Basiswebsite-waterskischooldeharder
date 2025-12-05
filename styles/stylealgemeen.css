@@ -7,25 +7,42 @@
     box-sizing: border-box;
 }
 
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-:root {
-    --color-text: #111;
-    --color-background: #f4f9ff;
-    --huiskleurblauw: #2F75DC;
-    --lichtehuiskleurblauw: #2f74dc92;
-    --huiskleurwit: #FFFFFF;
-    --h3kleur: #6da5f9;
-    --donkerehuiskleurblauw: #2258aa;
-    --nogdonkerehuiskleurblauw: #183f7b;
-    --gelehuiskleur: #fff316;
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* CUSTOM PROPERTIES */
+
+:root {
+    color-scheme: light dark;
+
+    --color-text: #111;
+    --color-background: #eaf1fa;
+    --huiskleurwit: #FFFFFF;
+    --donkerehuiskleurblauw: #2258aa;
+    --nogdonkerehuiskleurblauw: #183f7b;
+    --gelehuiskleur: #efe417;
+    --focuskleur: #122d56;
+}
+
+/* darkmode */
+
+@media (prefers-color-scheme:dark) {
+    :root {
+        --color-text: #f4f9ff;
+        --color-background: #163461;
+        --huiskleurwit: #183f7b;
+        --donkerehuiskleurblauw: #f4f9ff;
+        --nogdonkerehuiskleurblauw: #d5e3f8;
+        --focuskleur: #efe417;
+    }
+}
 
 @font-face {
-    font-family:"amaranth";
+    font-family: "amaranth";
     src: url("../fonts/Amaranth-Bold.woff");
     font-weight: bold;
 }
@@ -33,26 +50,56 @@
 @font-face {
     font-family: "amaranthregular";
     src: url("../fonts/Amaranth-Regular.woff");
-    font-weight:normal;
+    font-weight: normal;
 }
 
+/* STYLING */
 
-/****************/
-/* JOUW STYLING */
-/****************/
+/* header */
 
+header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: var(--huiskleurwit);
+    align-items: center;
 
-header img:nth-of-type(1) {
-
-width:100%;
-height:auto;
-padding-bottom: 3em;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
-/* Witruimte zijkant van pagina */
+/* LOGO */
+header img {
+    max-width: 3.5em;
+    position: relative;
+    right: 1em;
+}
+
+@media (min-width: 20em) {
+    header img {
+        max-width: 5em;
+        z-index: 11;
+    }
+
+}
+
+@media (min-width: 40em) {
+    header img {
+        max-width: 5em;
+        z-index: 13;
+    }
+
+}
+
+/* Main en sticky nav */
 
 main {
-    padding-inline:1.5em;
+    padding-inline: 1.5em;
+    background-image: url("../images/horizontaaltubefun2.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-top: 40vw;
 }
 
 @media (min-width: 40em) {
@@ -63,7 +110,7 @@ main {
 
 main p {
     margin-bottom: 5em;
-    max-width:54rem;
+    max-width: 54rem;
 }
 
 main section {
@@ -72,16 +119,14 @@ main section {
 
 nav ul {
     position: sticky;
-    top:0;
+    top: 0;
 }
 
 /* Hamburger menu*/
 
-
 nav {
     display: flex;
     justify-content: center;
-  
     position: fixed;
     top: 0;
     bottom: 0;
@@ -89,39 +134,40 @@ nav {
     right: 0;
     width: 100%;
 
-    background-color: var(--color-background);
+    background-color: var(--huiskleurwit);
     translate: -100% 0;
     transition: .5s;
 
-    z-index: 1;
+    z-index: 12;
 }
 
 nav.is-open {
     translate: 0 0;
     font-size: 1.5em;
-    line-height: 3em;
+    line-height: 2em;
 }
 
-/* stijling van de a'tjes */
+/* Styling van de a'tjes */
 
 nav ul a {
-    color: var(--color-text);
-    font-family: "amaranthregular";
+    font-family: "amaranth";
+    letter-spacing: .02em;
     color: var(--donkerehuiskleurblauw);
     text-decoration: none;
+
+    font-size: .7em;
 }
 
 nav ul a:hover {
-    text-decoration: underline .2em var(--nogdonkerehuiskleurblauw);
-    text-underline-offset: .5em;
-    color: var(--nogdonkerehuiskleurblauw); 
+    text-decoration: underline wavy .15em var(--donkerehuiskleurblauw);
+    text-underline-offset: .3em;
 }
 
 ul li {
     list-style: none;
 }
 
-/* button stijling als hij zichtbaar is */
+/* Button styling als hij zichtbaar is */
 
 header button {
     appearance: none;
@@ -129,9 +175,9 @@ header button {
     width: 2.5em;
     aspect-ratio: 1/1;
 
-    background-color: var(--color-background);
+    background-color: var(--huiskleurwit);
     border: none;
-    border-radius:.5em;
+    border-radius: .5em;
 
     display: grid;
     justify-items: center;
@@ -139,34 +185,33 @@ header button {
     padding: 0;
 
     position: relative;
-    z-index: 2;
+    z-index: 20;
     cursor: pointer;
 }
 
 header button span {
     display: block;
 
-    width: 1.8em; 
-    height: 0.2em;
-    background-color: var(--nogdonkerehuiskleurblauw);
+    width: 1.5em;
+    height: 0.22em;
+    background-color: var(--donkerehuiskleurblauw);
     border-radius: 1em;
 
     grid-row-start: 1;
     grid-column-start: 1;
 
     transition: .2s;
-
 }
 
 header button span:nth-of-type(1) {
-    translate: 0 -0.45em;  
+    translate: 0 -0.45em;
 }
 
 header button span:nth-of-type(3) {
     translate: 0 0.45em;
 }
 
-/* button stijling als er op wordt geklikt */
+/* Button styling als er op wordt geklikt */
 
 header button.is-open span:nth-of-type(1) {
     translate: 0 0;
@@ -182,7 +227,62 @@ header button.is-open span:nth-of-type(3) {
     rotate: -45deg;
 }
 
-/* body, headings */
+header button.is-open {
+    background-color: var(--huiskleurwit);
+}
+
+/* HEADER @MEDIA */
+
+@media (min-width: 48em) {
+    header button {
+        display: none;
+    }
+
+    header nav {
+        position: sticky;
+        top: 0;
+
+        padding-left: 4.5em;
+        padding-bottom: .5em;
+        translate: 0;
+        background-color: var(--huiskleurwit);
+        font-size: 1em;
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+    }
+
+    header {
+        background-color: var(--huiskleurwit);
+    }
+}
+
+@media (min-width: 42em) and (max-width: 60em) {
+    header nav ul {
+        display: flex;
+        justify-content: center;
+        font-size: 1.3em;
+        gap: 2.2em;
+    }
+}
+
+@media (min-width: 60em) {
+    header nav ul {
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.4em;
+        gap: 3em;
+        margin-top: 1em;
+    }
+}
+
+@media (min-width: 70em) {
+    header nav ul {
+        font-size: 1.4em;
+    }
+}
+
+/* Body & Headings */
 
 body {
     font-family: "huistypografietekst";
@@ -190,105 +290,74 @@ body {
 }
 
 body p {
-    font-size: 1em;
+    font-size: .9em;
     line-height: 1.5em;
     text-align: left;
     font-family: "amaranthregular";
+    margin-bottom: 0;
 }
 
-h1, h2 {
+@media (min-width: 42em) {
+    body p {
+        font-size: 1em;
+    }
+}
+
+section:nth-of-type(2) a:visited {
+    color: var(--nogdonkerehuiskleurblauw);
+}
+
+h1,
+h2 {
     font-family: "amaranth";
     color: var(--donkerehuiskleurblauw);
     text-align: center;
 }
 
 h1 {
-    font-size: 1.4em;
+    font-size: 1.5em;
 }
 
 h2 {
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
-h3 {
-font-size: 0.5em;
-  text-align: center;  
-  font-size: 1.2em;
-  font-family: "amaranth";
-  color: var(--donkerehuiskleurblauw);
+@media (min-width: 42em) {
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
 }
 
+
+@media (min-width: 60em) {
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    footer h2 {
+        font-size: 2em;
+    }
+}
 
 /* footer */
 
 footer {
-    background-color: var(--donkerehuiskleurblauw);
+    background-color: var(--huiskleurwit);
     display: flex;
     flex-wrap: wrap;
     margin-top: 5em;
-    justify-content: center;
+    justify-content: flex-start;
     padding-left: 5%;
     padding-right: 5%;
-    
 }
-
-footer li {
-    color: var(--huiskleurwit);
-    font-family: "huistypografietekst";
-    line-height: 2em;
-    list-style: none;
-    font-size: 0.7em;
-    text-decoration: none;
-}
-
-footer a {
-    color: var(--huiskleurwit);
-    font-family: "huistypografietekst";
-    line-height: 2em;
-    list-style: none;
-    font-size: 1em;
-    text-decoration: none;
-}
-
-footer h2 {
-    font-family: "Amaranth";
-    color: var(--huiskleurwit);
-    font-size: 2em;
-}
-
-em {
-    color: var(--gelehuiskleur);
-    font-style: normal;
-    
-}
-
-/* algemene media querys */
 
 @media (min-width: 42em) {
-    header button {
-        display: none;
-    }
-
-    header nav {
-        position: sticky;
-        top:0;
-        translate: 0;
-        background-color: var(--huiskleurwit);
-        font-size: 0.9em;
-    }
-
-    header img {
-        background: linear-gradient(var(--huiskleurwit), var(--color-background));
-    }
-
-    h1 {
-        font-size: 2.8em;
-    }
-
-    h2 {
-        font-size: 1.8em;
-    }
-
     footer {
         display: flex;
         justify-content: center;
@@ -296,34 +365,57 @@ em {
     }
 }
 
-@media (min-width: 42em) and (max-width: 60em){
-    header nav ul {
-        display: flex;
-        justify-content:center;
-        font-size: 1.2em;
-        gap: 2em;
-    }
-
-    body p {
-        font-size: 1.2em;
-    }
+footer ul {
+    margin-top: 5em;
 }
 
-@media (min-width: 60em) {
-    
-    header nav ul {
-        display: flex;
-        justify-content: space-around;
-        font-size: 1.3em;
-        gap: 4em;
-    }
-
-    body p {
-        font-size: 1.2em;
-    }
-
-    h1 {
-        font-size: 3em;
-    }
-
+footer li {
+    color: var(--nogdonkerehuiskleurblauw);
+    font-family: "amaranthregular";
+    line-height: 2em;
+    list-style: none;
+    font-size: 0.7em;
+    text-decoration: none;
 }
+
+footer a {
+    color: var(--nogdonkerehuiskleurblauw);
+    font-family: "amaranthregular";
+    line-height: 2em;
+    list-style: none;
+    font-size: .9em;
+    text-decoration: none;
+}
+
+footer h2 {
+    font-family: "Amaranth";
+    color: var(--donkerehuiskleurblauw);
+    font-size: 1.5em;
+}
+
+
+em {
+    color: var(--gelehuiskleur);
+    font-style: normal;
+}
+
+/* TOEGANKELIJKHEID */
+
+footer a:focus-visible {
+    outline: solid .2em var(--donkerehuiskleurblauw);
+    border-radius: .5em;
+    outline-offset: .4em;
+}
+
+nav a:focus-visible {
+    outline: solid .2em var(--donkerehuiskleurblauw);
+    border-radius: .5em;
+    outline-offset: .4em;
+}
+
+:focus-visible {
+    outline: solid .2em var(--focuskleur);
+    border-radius: .5em;
+    outline-offset: .3em;
+}
+

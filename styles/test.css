@@ -1,0 +1,404 @@
+:root {
+    --whitespace:clamp(1.25em, 5vw, 2em);
+  }
+  
+  
+  
+  
+  
+  /****************************/
+  /* HEADER DIALOG → BACKDROP */
+  /****************************/
+  
+  header dialog::backdrop {
+      /* STAP 2. */
+      /* JOUW CODE HIER */
+      /* background-color en backdrop-filter */
+      background-color:#f099;
+      backdrop-filter:blur(.5em);
+  }
+  
+  /* bonus */
+  /* zodat de content onder de dilog niet kan scrollen */
+  html:has(header dialog[open]) {
+      overflow:hidden;
+      scrollbar-gutter: stable;
+  }
+  
+  
+  
+  
+  
+  /*************************/
+  /* DIALOG → BUTTON CLOSE */
+  /*************************/
+  
+  dialog button.close {
+      /* STAP 3. */
+      /* JOUW CODE HIER */
+    /* rechtsboven in dialog (dialog is al fixed) */
+    /* qua maat 3em x 3em */
+      
+      position:absolute;
+      top:0;
+      right:0;
+      width:3em;
+      aspect-ratio:1;
+  }
+  
+  
+  
+  
+  
+  /**************************/
+  /* MAIN DIALOG → POSITION */
+  /**************************/
+  
+  main dialog {
+      /* STAP 5. */
+      /* JOUW CODE HIER */
+      /* fixed → right en bottom (left auto maken) */
+      /* z-index (hoger dan 1) */
+      position:fixed;
+      right:var(--whitespace);
+      bottom:var(--whitespace);
+      left:auto;
+      
+      z-index:2;
+  }
+  
+  
+  
+  
+  
+  /********************************/
+  /* MAIN DIALOG → ANIMATE IN/OUT */
+  /********************************/
+  
+  /* video van Kevin Powell: youtu.be/vmDEHAzj2XE  */
+  /* artikel op FrontendMasters: frontendmasters.com/blog/animating-dialog */
+  /* voorbeeld van Adam Argyle: codepen.io/argyleink/pen/zYbQBOm */
+  
+  /* STAP 6. */
+  /* JOUW CODE HIER */
+  
+  
+  
+  
+  
+  /**********************************/
+  /* HEADER DIALOG → ANIMATE IN/OUT */
+  /**********************************/
+  
+  /* video van Kevin Powell: youtu.be/vmDEHAzj2XE  */
+  /* artikel op FrontendMasters: frontendmasters.com/blog/animating-dialog */
+  /* voorbeeld van Adam Argyle: codepen.io/argyleink/pen/zYbQBOm */
+  
+  /* STAP 7. */
+  /* JOUW CODE HIER */
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /*************************************/
+  /*************************************/
+  /***                               ***/
+  /***   STYLING DIALOG              ***/
+  /***   HOEF JE NIETS MEE TE DOEN   ***/
+  /***                               ***/
+  /*************************************/
+  /*************************************/
+  
+  dialog {
+      width:min(
+          /* maximaal: breedte scherm - 2x whitespace */
+          100% - var(--whitespace) * 2,
+          /* gewenst 12em + 2x whitespace */
+          12em + var(--whitespace) * 2
+      );
+      padding:3em var(--whitespace) var(--whitespace);
+      
+      background:linear-gradient(-45deg, #060, #060c);
+      border:none;
+      border-radius:var(--whitespace);
+      color:white;
+      
+      overflow:visible;
+  }
+  
+  dialog form {
+      display:grid;
+      gap:1em .5em;
+  }
+  
+  dialog h2 {
+      margin:0;
+      font-weight:400;
+      line-height:1.25;
+  }
+  
+  dialog p {
+      margin:0;
+  }
+  
+  dialog label {
+      width:100%;
+      display:grid;
+      gap:.25em;
+  }
+  
+  dialog :is(input, textarea) {
+      width:100%;
+      padding:.25em .5em;
+      appearance:none;
+      border:none;
+      font-size:1em;
+  }
+  
+  dialog menu {
+      margin:0;
+      padding:0;
+      list-style-type:"";
+      display:flex;
+      gap:.5em;
+  }
+  
+  
+  
+  
+  /*************************************/
+  /*************************************/
+  /***                               ***/
+  /***   LAY OUT, KLEURTJES EN CO    ***/
+  /***   HOEF JE NIETS MEE TE DOEN   ***/
+  /***                               ***/
+  /*************************************/
+  /*************************************/
+  
+  
+  
+  /*******************/
+  /* GENERAL STYLING */
+  /*******************/
+  
+  *, *::after, *::before {
+    box-sizing:border-box;  
+  }
+  
+  h1, h2, h3 {
+    font-family:"Saira Semi Condensed", sans-serif;
+  }
+  
+  img {
+    max-width:100%;
+    display:block;
+  }
+  
+  button {
+    padding:.5em 1em;
+      
+      appearance:none;
+    background-color:#333;
+      border:solid .225em white;
+    
+      color:white;
+      line-height:1.25;
+      font-size:1em;
+      
+    cursor:pointer;
+  }
+  
+  :focus-visible {
+    outline:solid .3rem #f09;
+    outline-offset:.15rem;
+  }
+  
+  
+  
+  
+  
+  /**************/
+  /* CONTAINERS */
+  /**************/
+  
+  html {
+    color:#333;
+    background-color:#ccc;
+  }
+  
+  body {
+     margin:0;
+  }
+  
+  
+  
+  
+  
+  /**********/
+  /* HEADER */
+  /**********/
+  
+  header {
+      position:sticky;
+      top:0;
+      z-index:1;
+      
+    min-height:5em;
+    padding:0 var(--whitespace);
+    
+      display:flex;
+    justify-content:space-between;
+    align-items:center;
+      gap:1em;
+    
+      background:#060c;
+      backdrop-filter:blur(.25em);
+  }
+  
+  /* logo */
+  header a {
+    font-size:1.5em;
+    font-weight:700;
+    text-decoration:none;
+    text-transform:uppercase;
+      line-height:1.25;
+    color:white;
+  }
+  
+  header a:hover {
+    text-decoration:underline;  
+  }
+  
+  
+  
+  
+  /********/
+  /* MAIN */
+  /********/
+  
+  main {
+    padding:4em 0;
+    width:min(
+          /* maximaal: breedte scherm - 2x whitespace */
+          100% - var(--whitespace) * 2,
+          /* gewenst: 32em */
+          32em
+      );
+    margin-inline:auto;
+  }
+  
+  
+  
+  /* h1 en p */
+  h1 {
+    max-width:44rem;
+    margin:0;
+    font-size:3em;
+    font-weight:300;
+    line-height:1.1;
+  }
+  
+  h1 + p {
+      max-width:32rem;
+    margin:1rem 0 4rem;
+  }
+  
+  
+  
+  /* help button */
+  main > button {
+      position:fixed;
+      right:var(--whitespace);
+      bottom:var(--whitespace);
+      z-index:1;
+      
+    width:6em;
+    aspect-ratio:1;
+    border-radius:var(--whitespace);
+  }
+  
+  
+  
+  /* lijstje moppen */
+  
+  /* een mop */
+  main figure {
+      position:relative;
+      
+      max-width:calc(100% - var(--whitespace) * 2);
+      margin:0;
+      padding:var(--whitespace);
+      
+      display:grid;
+      gap:calc(var(--whitespace) * .5);
+      
+      background-color:#fff;
+      border-radius:var(--whitespace);
+  
+    /* speech thingie */
+      &::after {
+          content:"";
+          position:absolute;
+          top:calc(100% - .5px);
+          
+          width:calc(var(--whitespace) * 1.5);
+          height:calc(var(--whitespace) * .75);
+  
+          background-color:inherit;
+          clip-path:polygon(0 0, 100% 0, 0 100%, 0 0);
+      }
+  }
+  
+  /* mop oneven → links */
+  main figure:nth-of-type(odd) {
+      justify-self:start;
+      
+      /* speech thingie */
+      &::after {
+          left:var(--whitespace);
+      }
+  }
+  
+  /* mop even → rechts */
+  main figure:nth-of-type(even) {
+      justify-self:end;
+      
+      /* speech thingie */
+      &::after {
+          right:var(--whitespace);
+          scale:-1 1; /* flip */
+      }
+  }
+  
+  main figure + figure {
+      margin-top:var(--whitespace);
+  }
+  
+  /* mop tekst */
+  main figure blockquote {
+      margin:0;
+  }
+  
+  main figure blockquote p {
+      margin:0;
+  }
+  
+  main figure blockquote p:last-child {
+      font-style:italic;
+  }
+  
+  main figure blockquote p:last-child::before {
+      content:"→ ";
+  }
+  
+  /* mop schrijver */
+  main figure figcaption {
+      text-align:right;
+      justify-self:end;
+  }
