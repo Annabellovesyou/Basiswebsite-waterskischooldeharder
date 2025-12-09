@@ -3,12 +3,12 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="author" content="jouw naam">
+	<meta name="Annabel" content="waterskischooldeharder">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Howdy FED2526</title>
 
-	<link href="styles/style.css" rel="stylesheet">
+	<link href="styles/index.css" rel="stylesheet">
 	<link rel="stylesheet" href="styles/stylealgemeen.css">
 
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
@@ -16,30 +16,33 @@
 
 <body>
 
-<header>
-	
-	<button aria-label="toggle menu">
-		<span></span>
-		<span></span>
-		<span></span>
-	</button>
+	<header>
 
-	<nav>
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="#">Sport</a></li>
-			<li><a href="#">Recreatief</a></li>
-			<li><a href="tarieven.html">Tarieven</a></li>
-			<li><a href="#">Boeken</a></li>
-			<li><a href="contact.html">Contact</a></li>
-		</ul>
-	</nav>
+		<!-- skip link uitleg: https://www.w3schools.com/accessibility/accessibility_skip_links.php -->
+		<a href="#main">Skip naar hoofd content</a>
 
-	<img src="images/logowss.png" alt="logo">
+		<button aria-label="toggle menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
 
-</header>
+		<nav>
+			<ul>
+				<li><a class="huidig" aria-label="Home pagina van de website" href="index.html">Home</a></li>
+				<li><a aria-label="Pagina over sporten die worden aangeboden" href="#">Sport</a></li>
+				<li><a aria-label="Pagina over recreatie dat wordt aangeboden " href="#">Recreatief</a></li>
+				<li><a aria-label="Pagina met tarieven" href="tarieven.html">Tarieven</a></li>
+				<li><a aria-label="Pagin om te boeken" href="#">Boeken</a></li>
+				<li><a aria-label="Pagina om contact op te nemen" href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
 
-	<main>
+		<img src="images/logowss.png" alt="Het logo van de website">
+
+	</header>
+
+	<main id="main">
 		<section>
 			<h1>
 				Welkom bij Waterski & Boarding School De Harder
@@ -63,11 +66,11 @@
 			<p>
 				Alex Clay is al ruim 30 jaar een gelicenseerde instructeur op diverse gebieden. Zoals waterskien,
 				wakeboarden, schansspringen en nog meer watersporten. Alex doet zelf al 45 jaar aan mono skien en heeft
-				aan veel wedstrijden en kampioenschappen meegedaan. 
-				 <a href=#>Lees meer</a>
+				aan veel wedstrijden en kampioenschappen meegedaan.
+				<a aria-label="Lees meer over coach Alex Clay" href=#>Lees meer</a>
 			</p>
 
-			
+
 
 			<img src="images/coachalex.jpg" alt="Een foto van coach Alex Clay">
 		</section>
@@ -90,8 +93,8 @@
 						<h3>
 							Waterskien
 						</h3>
-						<img src="images/kaartwaterskier.jpg" alt="Afbeelding van een jongen op waterski's" />
-						<button><a href="tarieven.html">Meer weten</a></button>
+						<img src="images/kaartwaterskier.jpg" alt="Afbeelding van een jongen op waterski's">
+						<a aria-label="Meer weten over waterskien" href="tarieven.html">Meer weten</a>
 					</article>
 				</li>
 
@@ -102,64 +105,69 @@
 						<h3>
 							Wakeboarden
 						</h3>
-						<img src="images/wakeboarder.jpeg" alt="Afbeelding van een jongen die aan het wakeboarden is" />
-						<button><a href="tarieven.html">Meer weten</a></button>
+						<img src="images/wakeboarder.jpeg" alt="Afbeelding van een jongen die aan het wakeboarden is">
+						<a aria-label="Meer weten over wakeboarden" href="tarieven.html">Meer weten</a>
 					</article>
 				</li>
 
+				<!-- kaart 3 -->
 				<li>
 					<article>
 						<h3>
 							Bandje varen
 						</h3>
 						<img src="images/tubefun.jpg" alt="Afbeelding van het varen met een band">
-						<button><a href="tarieven.html">Meer weten</a></button>
+						<a aria-label="Meer weten over bandje varen" href="tarieven.html">Meer weten</a>
 					</article>
 				</li>
 
+				<!-- kaart 4 -->
 				<li>
 					<article>
 						<h3>
 							Suppen
 						</h3>
 						<img src="images/suppen2.jpg" alt="Afbeelding van iemand die supt">
-						<button><a href="tarieven.html">Meer weten</a></button>
+						<a aria-label="Meer weten over suppen" href="tarieven.html">Meer weten</a>
 					</article>
 				</li>
 
 			</ul>
 		</section>
 
+		<!-- aria label zichtbaar maken voor screenreader: https://tetralogical.com/blog/2024/04/04/when-to-use-tabindex-0/ -->
+
 		<section>
 			<h2>
 				Impressie van de locatie
 			</h2>
-			<video width="100%" muted>
-				<source src="videos/videoskischool.mp4" type="video/mp4" />
+			<video muted aria-label="Video van de locatie van de waterskischool" tabindex="0">
+				<source src="videos/videoskischool.mp4" type="video/mp4">
 			</video>
 
 			<button>
-				<img src="images/playbuttonwit.svg" alt="play" />
+				<img src="images/playbuttonwit.svg" alt="play">
 			</button>
 
 		</section>
 
+		<!-- Gebruikte bron dialog: https://codepen.io/Annabellovesyou/pen/jEqpGpM -->
+
 		<section>
 
-          <button>Boeken</button>
-          
-          <dialog>
-              <form method="dialog">
-                  <h2>Boeken</h2>
-                  <button class="close" aria-label="sluit hulp">X</button>
-                  <p>Vul de activiteit en de gewenste datum en tijd in. See you on the water!</p>
-                  <label>Bericht <textarea rows="3" placeholder="Typ iets..."></textarea></label>
-                  <button type="submit">Verstuur</button>
-              </form>
-          </dialog>
+			<button>Boeken</button>
+
+			<dialog>
+				<form method="dialog">
+					<h2>Boeken</h2>
+					<button class="close" aria-label="sluit hulp">X</button>
+					<p>Vul de activiteit en de gewenste datum en tijd in. See you on the water!</p>
+					<label><textarea rows="3" placeholder="Typ iets..."></textarea></label>
+					<button type="submit">Verstuur</button>
+				</form>
+			</dialog>
 
 		</section>
-
 
 
 	</main>
@@ -172,8 +180,8 @@
 				<li>Waterskischool de Harder</li>
 				<li>KVK-nr. 71541403</li>
 				<li>IBAN L03INGB0680336044</li>
-				<li><a href="#">Deelname voorwaarden</a></li>
-				<li><a href="#">Algemene voorwaarden</a></li>
+				<li><a aria-label="Pagina over voorwaarden van deelname" href="#">Deelname voorwaarden</a></li>
+				<li><a aria-label="Pagina over algemene voorwaarden" href="#">Algemene voorwaarden</a></li>
 			</ul>
 		</section>
 
@@ -189,9 +197,11 @@
 		<section>
 			<h2 hidden>Lijst met informatie</h2>
 			<ul>
-				<li>adres <a href="#">Strandweg 5, 8256 RZ, Biddinghuizen</a></li>
-				<li>Tel. nr.: <a href="#">06 – 5377 4863</a></li>
-				<li>E-mail: <a href="#">hallo@waterskischooldeharder.nl</a></li>
+				<li>adres <a aria-label="Adres van de waterskischool" href="#">Strandweg 5, 8256 RZ, Biddinghuizen</a>
+				</li>
+				<li>Tel. nr.: <a aria-label="Telefoonnummer van de waterskischool" href="#">06 – 5377 4863</a></li>
+				<li>E-mail: <a aria-label="E-mail adres van de waterskischool"
+						href="#">hallo@waterskischooldeharder.nl</a></li>
 			</ul>
 		</section>
 
@@ -199,7 +209,7 @@
 
 	</footer>
 
-	<script defer src="scripts/script.js"></script>
+	<script defer src="scripts/index.js"></script>
 </body>
 
 </html>

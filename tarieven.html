@@ -16,34 +16,33 @@
 
 <body>
 
-<header>
+    <header>
+
+        <a href="#main">Skip naar hoofd content</a>
+
+        <button aria-label="toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav>
+            <ul>
+                <li><a aria-label="Home pagina van de website" href="index.html">Home</a></li>
+                <li><a aria-label="Pagina over sporten die worden aangeboden" href="#">Sport</a></li>
+                <li><a aria-label="Pagina over recreatie dat wordt aangeboden " href="#">Recreatief</a></li>
+                <li><a class="huidig" aria-label="Pagina met tarieven" href="tarieven.html">Tarieven</a></li>
+                <li><a aria-label="Pagin om te boeken" href="#">Boeken</a></li>
+                <li><a aria-label="Pagina om contact op te nemen" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <img src="images/logowss.png" alt="Het logo van de website">
+
+    </header>
 
 
-    <button aria-label="toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Sport</a></li>
-            <li><a href="#">Recreatief</a></li>
-            <li><a href="tarieven.html">Tarieven</a></li>
-            <li><a href="#">Boeken</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-</header>
-
-
-    <main>
-
-
-
-
+    <main id="main">
         <section>
             <h1>
                 Tarieven
@@ -51,109 +50,125 @@
 
             <p>
                 Hier kun je een compleet overzicht vinden van de prijzen van de activiteiten bij Waterski & Boarding
-                School De Harder. Alle prijzen zijn inclusief brandstof, gebruik van wetsuit, zwemvest, sportmateriaal en inclusief BTW.
+                School De Harder. Alle prijzen zijn inclusief brandstof, gebruik van wetsuit, zwemvest, sportmateriaal
+                en inclusief BTW.
             </p>
         </section>
 
         <section>
+            <h2>Boeken</h2>
+            <p>Om te boeken kunt een e-mail sturen naar <a href="#">alexclay@live.nl</a>, of bellen via <a
+                    href="#">0653774863</a>. Wij zijn iedere dag van de week telefonisch bereikbaar van 9:00 uur tot
+                18:00 uur. U kunt ook gebruik maken van de knop om een activiteit te boeken, links onder op de pagina.
+            </p>
+        </section>
+
+        <!-- /* Gebruikte bron tabel maken: https://www.w3schools.com/html/html_tables.asp*/ -->
+
+        <section>
             <table>
+                <caption>Tarieven tabel recreatie en tube fun</caption>
                 <tr>
                     <th>Waterskien Recreatief & Tube fun</th>
                     <th>Tarief</th>
                 </tr>
                 <tr>
-                    <td><a href="#">Waterski recreatief</a>, 15 minuten</td>
+                    <td><a aria-label="Meer weten over recreatief waterskien" href="#">Waterski recreatief</a>, 15
+                        minuten</td>
                     <td>€ 27,50 per persoon</td>
                 </tr>
                 <tr>
-                    <td><a href="#">Wakeboard recreatief</a>, 15 minuten</td>
+                    <td><a aria-label="Meer weten over recreatief wakeboarden" href="#">Wakeboard recreatief</a>, 15
+                        minuten</td>
                     <td>€ 27,50 per persoon</td>
                 </tr>
                 <tr>
-                    <td><a href="#">Suppen</a>, 60 minuten</td>
+                    <td><a aria-label="Meer weten over suppen" href="#">Suppen</a>, 60 minuten</td>
                     <td>€ 15 per persoon</td>
                 </tr>
                 <tr>
-                    <td><a href="#">Flying Lunar</a>, 7,5 minuten</td>
+                    <td><a aria-label="Meer weten over de flying lunar" href="#">Flying Lunar</a>, 7,5 minuten</td>
                     <td>€ 7,50 per persoon</td>
                 </tr>
                 <tr>
-                    <td><a href="#">Banaan varen</a>, 7,5 minuten</td>
+                    <td><a aria-label="Meer weten over banaan varen" href="#">Banaan varen</a>, 7,5 minuten</td>
                     <td>€ 7,50 per persoon</td>
                 </tr>
                 <tr>
-                    <td><a href="#">Band varen</a>, 7,5 minuten</td>
+                    <td><a aria-label="Meer weten over band varen" href="#">Band varen</a>, 7,5 minuten</td>
                     <td>€ 10,- per persoon</td>
                 </tr>
                 <tr>
-                    <td><a href="#">Arrangement</a>, watersport all inclusive/td>
+                    <td><a aria-label="Meer weten over een arrangement" href="#">Arrangement</a>, watersport all
+                        inclusive/td>
                     <td>€ 100,- per uur, per groep</td>
                 </tr>
                 <tr>
-                    <td><a href="#">Arrangement</a>, watersport+eten, minimaal 2 personen</td>
+                    <td><a aria-label="Meer weten over een arrangement en eten" href="#">Arrangement</a>,
+                        watersport+eten, minimaal 2 personen</td>
                     <td>Prijs op aanvraag</td>
                 </tr>
+
+            </table>
+        </section>
+
+        <section>
+            <table>
+                <caption>Tarieven tabel waterski en wakeboard pro</caption>
                 <tr>
-                    <td><a href="#">Boek nu</a></td>
+                    <th>Waterski & Wakeboard School Pro</th>
+                    <th>Tarief</th>
+                </tr>
+                <tr>
+                    <td><a aria-label="Meer weten over slalomskiën" href="#">Slalomskiën</a>, 6 passages, inclusief
+                        coaching</td>
+                    <td>€ 35,- per persoon</td>
+                </tr>
+                <tr>
+                    <td><a aria-label="Meer weten over wakeboard les" href="#">Wakeboard les</a>, 15 minuten, inclusief
+                        coaching</td>
+                    <td>€ 35,- per persoon</td>
+                </tr>
+                <tr>
+                    <td><a aria-label="Meer weten over trickskiën" href="#">trickski les</a>, 15 minuten, inclusief
+                        coaching</td>
+                    <td>€ 35,- per persoon</td>
+                </tr>
+                <tr>
+                    <td><a aria-label="Meer weten over schansspringen" href="#">schansspringen</a>, 6 sprongen,
+                        inclusief coaching</td>
+                    <td>€ 35,- per persoon</td>
                 </tr>
             </table>
         </section>
 
         <section>
             <table>
-                <tr>
-                    <th>Waterski & Wakeboard School Pro</th>
-                    <th>Tarief</th>
-                </tr>
-                <tr>
-                    <td><a href="#">Slalomskiën</a>, 6 passages, inclusief coaching</td>
-                    <td>€ 35,- per persoon</td>
-                </tr>
-                <tr>
-                    <td><a href="#">Wakeboard les</a>, 15 minuten, inclusief coaching</td>
-                    <td>€ 35,- per persoon</td>
-                </tr>
-                <tr>
-                    <td><a href="#">trickski les</a>, 15 minuten, inclusief coaching</td>
-                    <td>€ 35,- per persoon</td>
-                </tr>
-                <tr>
-                    <td><a href="#">schansspringen</a>, 6 sprongen, inclusief coaching</td>
-                    <td>€ 35,- per persoon</td>
-                </tr>
-                <tr>
-                    <td><a href="#">Boek nu</a></td>
-                </tr>
-                </table>
-        </section>
-
-        <section>
-            <table>
+                <caption>Tarieven tabel water fun/caption>
                 <tr>
                     <th>Water fun</th>
                     <th>Tarief</th>
                 </tr>
                 <tr>
-                    <td><a href="#">Rondvaart</a>,  in 30 minuten de mooiste plekjes
+                    <td><a aria-label="Meer weten over een rondvaart" href="#">Rondvaart</a>, in 30 minuten de mooiste
+                        plekjes
                         van het Veluwemeer bekijken.</td>
                     <td>€ 10,- per persoon,
                         max. 7 personen</td>
                 </tr>
                 <tr>
-                    <td><a href="#">Boot te huur</a>, incl. schipper, all inclusive</td>
+                    <td><a aria-label="Meer weten over een boot huren" href="#">Boot te huur</a>, incl. schipper, all
+                        inclusive</td>
                     <td>€ 100,- per uur, per groep</td>
                 </tr>
-                <tr>
-                    <td><a href="#">Boek nu</a></td>
-                </tr>
-                </table>
+            </table>
         </section>
 
 
         <section>
 
             <button>Boeken</button>
-            
+
             <dialog>
                 <form method="dialog">
                     <h2>Boeken</h2>
@@ -163,9 +178,9 @@
                     <button type="submit">Verstuur</button>
                 </form>
             </dialog>
-  
-          </section>
-  
+
+        </section>
+
 
 
     </main>
@@ -173,16 +188,18 @@
     <footer>
 
         <section>
+            <h2 hidden>Lijst met informatie</h2>
             <ul>
                 <li>Waterskischool de Harder</li>
                 <li>KVK-nr. 71541403</li>
                 <li>IBAN L03INGB0680336044</li>
-                <li><a href="#">Deelname voorwaarden</a></li>
-                <li><a href="#">Algemene voorwaarden</a></li>
+                <li><a aria-label="Pagina over voorwaarden van deelname" href="#">Deelname voorwaarden</a></li>
+                <li><a aria-label="Pagina over algemene voorwaarden" href="#">Algemene voorwaarden</a></li>
             </ul>
         </section>
 
         <section>
+            <h2 hidden>Lijst met informatie</h2>
             <ul>
                 <li>Weergaven van vandaag: 8</li>
                 <li>Aantal weergaven laatste 7 dagen: 441</li>
@@ -191,10 +208,13 @@
         </section>
 
         <section>
+            <h2 hidden>Lijst met informatie</h2>
             <ul>
-                <li>adres <a href="#">Strandweg 5, 8256 RZ, Biddinghuizen</a></li>
-                <li>Tel. nr.: <a href="#">06 – 5377 4863</a></li>
-                <li>E-mail: <a href="#">hallo@waterskischooldeharder.nl</a></li>
+                <li>adres <a aria-label="Adres van de waterskischool" href="#">Strandweg 5, 8256 RZ, Biddinghuizen</a>
+                </li>
+                <li>Tel. nr.: <a aria-label="Telefoonnummer van de waterskischool" href="#">06 – 5377 4863</a></li>
+                <li>E-mail: <a aria-label="E-mail adres van de waterskischool"
+                        href="#">hallo@waterskischooldeharder.nl</a></li>
             </ul>
         </section>
 
@@ -202,7 +222,7 @@
 
     </footer>
 
-    <script defer src="scripts/test.js"></script>
+    <script defer src="scripts/tarieven&contact.js"></script>
 </body>
 
 </html>

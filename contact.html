@@ -16,32 +16,33 @@
 
 <body>
 
-<header>
+	<header>
+
+		<a href="#main">Skip naar hoofd content</a>
+
+		<button aria-label="toggle menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+
+		<nav>
+			<ul>
+				<li><a aria-label="Home pagina van de website" href="index.html">Home</a></li>
+				<li><a aria-label="Pagina over sporten die worden aangeboden" href="#">Sport</a></li>
+				<li><a aria-label="Pagina over recreatie dat wordt aangeboden " href="#">Recreatief</a></li>
+				<li><a aria-label="Pagina met tarieven" href="tarieven.html">Tarieven</a></li>
+				<li><a aria-label="Pagin om te boeken" href="#">Boeken</a></li>
+				<li><a class="huidig" aria-label="Pagina om contact op te nemen" href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+
+		<img src="images/logowss.png" alt="Het logo van de website">
 
 
-	<button aria-label="toggle menu">
-		<span></span>
-		<span></span>
-		<span></span>
-	</button>
+	</header>
 
-	<nav>
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="#">Sport</a></li>
-			<li><a href="#">Recreatief</a></li>
-			<li><a href="tarieven.html">Tarieven</a></li>
-			<li><a href="#">Boeken</a></li>
-			<li><a href="contact.html">Contact</a></li>
-		</ul>
-	</nav>
-
-</header>
-
-	<main>
-
-
-
+	<main id="main">
 
 		<section>
 			<h1>
@@ -55,7 +56,8 @@
 
 			<ul>
 				<li>Telefoonnummer: 0615436143</li>
-				<li>E-mail: <a href="#">hallo@waterskischooldeharder.nl</a></li>
+				<li>E-mail: <a aria-label="E-mail adres van de waterskischool"
+						href="#">hallo@waterskischooldeharder.nl</a></li>
 				<li>Via onderstaand formulier</li>
 			</ul>
 		</section>
@@ -78,10 +80,13 @@
 
 				<input type="submit" value="Verstuur"><br>
 				<input type="reset" value="Reset">
-    
-				
-			  </form> 
+
+
+			</form>
 		</section>
+
+
+		<img src="images/animatiefigma.png" alt="animatie van de boot">
 
 	</main>
 
@@ -93,8 +98,8 @@
 				<li>Waterskischool de Harder</li>
 				<li>KVK-nr. 71541403</li>
 				<li>IBAN L03INGB0680336044</li>
-				<li><a href="#">Deelname voorwaarden</a></li>
-				<li><a href="#">Algemene voorwaarden</a></li>
+				<li><a aria-label="Pagina over voorwaarden van deelname" href="#">Deelname voorwaarden</a></li>
+				<li><a aria-label="Pagina over algemene voorwaarden" href="#">Algemene voorwaarden</a></li>
 			</ul>
 		</section>
 
@@ -110,9 +115,11 @@
 		<section>
 			<h2 hidden>Lijst met informatie</h2>
 			<ul>
-				<li>adres <a href="#">Strandweg 5, 8256 RZ, Biddinghuizen</a></li>
-				<li>Tel. nr.: <a href="#">06 – 5377 4863</a></li>
-				<li>E-mail: <a href="#">hallo@waterskischooldeharder.nl</a></li>
+				<li>adres <a aria-label="Adres van de waterskischool" href="#">Strandweg 5, 8256 RZ, Biddinghuizen</a>
+				</li>
+				<li>Tel. nr.: <a aria-label="Telefoonnummer van de waterskischool" href="#">06 – 5377 4863</a></li>
+				<li>E-mail: <a aria-label="E-mail adres van de waterskischool"
+						href="#">hallo@waterskischooldeharder.nl</a></li>
 			</ul>
 		</section>
 
@@ -120,7 +127,7 @@
 
 	</footer>
 
-	<script defer src="scripts/script.js"></script>
+	<script defer src="scripts/tarieven&contact.js"></script>
 </body>
 
 </html>
