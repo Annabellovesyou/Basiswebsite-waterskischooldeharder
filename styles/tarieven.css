@@ -1,38 +1,21 @@
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-:root {
-    --color-text: #111;
-    --color-background: #f4f9ff;
-    --huiskleurblauw: #2F75DC;
-    --lichtehuiskleurblauw: #2f74dc92;
-    --huiskleurwit: #FFFFFF;
-    --h3kleur: #6da5f9;
-    --donkerehuiskleurblauw: #2258aa;
-    --nogdonkerehuiskleurblauw: #183f7b;
-    --schaduw:#a9a9a9;
-  }
-  
-  
-  @font-face {
-    font-family: "huistypografiebold";
-    src: url("../fonts/Helvetica-Bold.ttf");
-    font-weight: bold;
-  }
-  
-  @font-face {
-    font-family: "huistypografietekst";
-    src: url("../fonts/Helvetica.ttf");
-  }
-
 
   /* styling */
-main section:nth-of-type(1) {
+
+main section:nth-of-type(1),
+main section:nth-of-type(2) {
     max-width: 55rem;
     margin-inline: auto;
   }
 
   /* tabel */
+
+  /* Gebruikte bron voor caption: https://www.w3schools.com/tags/tag_caption.asp */
+  /* Gebruikte bron tabel stylen: https://www.w3schools.com/css/css_table.asp */
+
+  caption {
+    position: absolute;
+    left: -1000em;
+  }
 
 table a {
     color: var(--nogdonkerehuiskleurblauw);
@@ -68,6 +51,8 @@ table a {
     font-size: .6em;
   }
 
+/* Media voor tabel */
+
   @media (min-width: 25em) {
     td {
         font-size: .7em;
@@ -85,8 +70,6 @@ table a {
   }
 
 
-
-
 /* BOEKEN POP UP */
 
 :root {
@@ -96,12 +79,22 @@ table a {
 /* Sluit button */
 
 dialog button.close {
-position: absolute;
-top: 0;
-right: 0;
-width: 3em;
-aspect-ratio: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3em;
+  aspect-ratio: 1;
+
+  background-color: var(--nogdonkerehuiskleurblauw);
+  color: var(--huiskleurwit);
+  border: solid .1em var(--huiskleurwit);
 }
+
+dialog button.close:hover {
+  background-color: var(--huiskleurwit);
+  color: var(--nogdonkerehuiskleurblauw);
+}
+
 
 /* Locatie dialog */
 
@@ -154,14 +147,18 @@ dialog label {
 }
 
 textarea::placeholder {
-  color: var(--schaduw);
+  color: var(--huiskleurwit);
 }
 
 dialog :is(input, textarea) {
+
+  background-color: var(--nogdonkerehuiskleurblauw);
+  color: var(--huiskleurwit);
+  border: solid .1em var(--huiskleurwit);
+
   width: 100%;
   padding: .7em .7em;
   appearance: none;
-  border: none;
   font-size: 1em;
   border-radius: .5em;
   height: 7em;
@@ -169,47 +166,80 @@ dialog :is(input, textarea) {
   font-family: "amaranthregular";
 }
 
-/* *, *::after, *::before {
-  box-sizing:border-box;  
-} */
+button[type=submit] {
+  background-color: var(--nogdonkerehuiskleurblauw);
+  color: var(--huiskleurwit);
+  border: solid .1em var(--huiskleurwit);
+ 
+  border-radius: 10em;
+}
 
-section:nth-of-type(5) > button {
-  border-radius: var(--whitespace);
+button[type=submit]:hover {
+  border-radius: 10em;
+
+  background-color: var(--huiskleurwit);
+  color: var(--nogdonkerehuiskleurblauw);
+}
+
+section:nth-of-type(6)>button {
+  border-radius: 1.2em;
   position: fixed;
   right: var(--whitespace);
   bottom: var(--whitespace);
-  z-index: 1;
+
 
   width: 5em;
   aspect-ratio: 1;
-  
-
-  padding: .5em 1em;
 
   appearance: none;
-  
 
-  background-color: var(--donkerehuiskleurblauw);
+  background-color: var(--nogdonkerehuiskleurblauw);
   color: var(--huiskleurwit);
   font-size: 1em;
 
   cursor: pointer;
+
+  box-shadow: .1em .1em .2em var(--schaduw);
 }
 
+/* alle buttons */
 button {
   padding: .5em 1em;
-
-  appearance: none;
   background-color: var(--color-background);
   border-radius: .5em;
   border: solid var(--color-background);
-  color: var(--nogdonkerehuiskleurblauw);
+
+  
   line-height: 1.25;
   font-size: 1em;
 
   font-family: "amaranthregular";
 
   cursor: pointer;
+}
 
-  
+/* animatie button schalen en draaien */
+
+section:nth-of-type(6)>button:hover {
+  animation-name: schalenbutton;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes schalenbutton {
+  0% {
+scale: 1;
+rotate: 0;
+  }
+
+  50% {
+scale: 1.2;
+border-radius: 20em;
+box-shadow: .2em .2em .5em var(--schaduw);
+  }
+
+  100% {
+scale: 1;
+rotate: 360deg;
+  }
 }

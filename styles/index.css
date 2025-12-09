@@ -1,0 +1,472 @@
+/* STYLING */
+
+
+main {
+  padding-inline: 1.5em;
+  background-image: url("../images/horizontaaltubefun2.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-top: 40vw;
+}
+
+
+main section:nth-of-type(1) {
+  max-width: 55rem;
+  margin-inline: auto;
+}
+
+/* Section 2: coach Alex Clay */
+
+main section:nth-of-type(2) img {
+  display: flex;
+  max-width: 60%;
+  justify-self: center;
+  margin-top: 2em;
+  box-shadow: 1em 1em var(--donkerehuiskleurblauw);
+}
+
+@media (min-width: 30em) {
+  main section:nth-of-type(2) {
+    max-width: 55rem;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    grid-template-rows: max-content 1fr;
+    column-gap: 1em;
+  }
+
+  main section:nth-of-type(2) h2 {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  main section:nth-of-type(2) p {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+  }
+
+  main section:nth-of-type(2) img {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+    border-radius: 2%;
+    box-shadow: 1em 1em var(--donkerehuiskleurblauw);
+
+  }
+
+}
+
+@media (min-width: 60em) {
+  main section:nth-of-type(2) img {
+    box-shadow: 1.5em 1.5em var(--donkerehuiskleurblauw);
+  }
+}
+
+/* Styling van Lees meer link */
+
+main section:nth-of-type(2) a {
+  display: block;
+  margin-top: 1em;
+}
+
+main section:nth-of-type(2) a {
+  display: flex;
+  justify-self: flex-start;
+  position: relative;
+  padding-right: 2.5em;
+  text-decoration: underline .15em var(--nogdonkerehuiskleurblauw);
+  text-underline-offset: .3em;
+}
+
+main section:nth-of-type(2) a:after {
+  content: "→";
+  font-size: 2em;
+  position: absolute;
+  right: 0;
+  top: .12em;
+}
+
+/* Section 3: kaarten */
+
+main section:nth-of-type(3) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: auto;
+}
+
+main section:nth-of-type(3) ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  /* Op grote schermenis de kolom max 20em breed.
+Op kleine schermen is kolom zo breed als nodig*/
+
+  display: grid;
+  grid-template-columns: min(100%, 20em);
+  justify-content: center;
+  gap: 2em;
+
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+
+  border-radius: 1em;
+}
+
+/* @MEDIA VOOR KAARTEN */
+
+@media (min-width: 50em) {
+  main section:nth-of-type(3)>ul {
+
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+  }
+}
+
+@media (min-width: 70em) {
+  main>section:nth-of-type(3)>ul {
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @media (min-width: 80em) and (max-width: 140em) {
+
+    main>section:nth-of-type(2)>ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3em;
+    }
+  }
+}
+
+/* Styling van articles */
+
+main section:nth-of-type(3) article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  background-color: var(--huiskleurwit);
+  border-radius: 0.8em;
+
+  box-shadow: 0.1em 0.1em 0.2em var(--schaduw);
+}
+
+main section:nth-of-type(3) h3 {
+  font-size: 1.2em;
+  line-height: 1.1em;
+  padding-bottom: 1em;
+  margin: 1.2em 0 0 1em;
+  text-align: start;
+  color: var(--nogdonkerehuiskleurblauw);
+  font-family: "amaranthregular";
+}
+
+main section:nth-of-type(3) img {
+  width: 100%;
+  border-radius: .4rem .4rem 0 0;
+
+  order: -1;
+  /* met order komt de img vooraan te staan */
+}
+
+main section:nth-of-type(3) a {
+  display: flex;
+  justify-self: flex-start;
+  position: relative;
+  padding-right: 3.5em;
+  padding-top: 1.3em;
+  text-decoration: underline .15em var(--nogdonkerehuiskleurblauw);
+  text-underline-offset: .3em;
+
+  color: var(--nogdonkerehuiskleurblauw);
+}
+
+main section:nth-of-type(3) a::after {
+  content: "→";
+  font-size: 2em;
+  position: absolute;
+  right: .5em;
+  top: .31em;
+}
+
+main section:nth-of-type(3) a:active {
+  transform: translateY(.1em);
+}
+
+main a:hover {
+  cursor: pointer;
+}
+
+main ul li {
+  color: var(--color-background);
+  font-family: "amaranthregular";
+}
+
+/* vierde section: video + button */
+
+section:nth-of-type(4) {
+  position: relative;
+  display: block;
+  margin-inline: auto;
+  width: fit-content;
+}
+
+section:nth-of-type(4) button {
+  appearance: none;
+  background-color: var(--donkerehuiskleurblauw);
+  padding: .3em;
+  border: solid .01em var(--donkerehuiskleurblauw);
+  border-top-right-radius: .5em;
+  opacity: 75%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  section:nth-of-type(4) button {
+    background-color: var(--huiskleurwit);
+    border: border solid .01em var(--huiskleurwit);
+  }
+}
+
+section:nth-of-type(4) button:hover {
+  opacity: 100%;
+  cursor: pointer;
+}
+
+video {
+  width: 100%;
+  max-width: 50em;
+  height: auto;
+  display: block;
+  border-radius: .5em;
+  box-shadow: 1em 1em var(--donkerehuiskleurblauw);
+  margin-bottom: 13em;
+}
+
+/* @MEDIA VOOR VIDEO */
+
+@media (min-width: 60em) {
+  video {
+    box-shadow: 1.5em 1.5em var(--donkerehuiskleurblauw);
+  }
+}
+
+section:nth-of-type(4) button>img {
+  width: 1.5em;
+}
+
+@media (min-width: 25em) {
+
+  section:nth-of-type(4) button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+
+/* BOEKEN POP UP */
+
+:root {
+  --whitespace: clamp(1.25em, 5vw, 2em);
+}
+
+/* Sluit button */
+
+dialog button.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3em;
+  aspect-ratio: 1;
+
+  background-color: var(--nogdonkerehuiskleurblauw);
+  color: var(--huiskleurwit);
+  border: solid .1em var(--huiskleurwit);
+}
+
+
+dialog button.close:hover {
+  background-color: var(--huiskleurwit);
+  color: var(--nogdonkerehuiskleurblauw);
+}
+
+/* Locatie dialog */
+
+main dialog {
+  position: fixed;
+  right: var(--whitespace);
+  bottom: var(--whitespace);
+  left: auto;
+
+  z-index: 2;
+}
+
+/* Styling dialog (uit opdracht codepen)*/
+
+dialog {
+  width: min(100% - var(--whitespace) * 2,
+      12em + var(--whitespace) * 2);
+
+  padding: 3em var(--whitespace) var(--whitespace);
+
+  /* Uitleg over linear gradient kleur (ChatGPT) Prompt: kan je dit uitleggen: background: 
+  linear-gradient(-45deg, var(--nogdonkerehuiskleurblauw), var(--donkerehuiskleurblauw)) */
+
+  background: linear-gradient(0deg, var(--nogdonkerehuiskleurblauw), var(--donkerehuiskleurblauw));
+  border-radius: var(--whitespace);
+  color: var(--huiskleurwit);
+
+  overflow: visible;
+
+  border: none;
+}
+
+dialog form {
+  display: grid;
+  gap: 1em .5em;
+}
+
+dialog h2 {
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--huiskleurwit);
+  font-family: "amaranthregular";
+}
+
+dialog p {
+  margin: 0;
+}
+
+dialog label {
+  color: var(--middelblauw);
+  font-family: "amaranthregular";
+  font-size: .9em;
+}
+
+textarea::placeholder {
+  color: var(--huiskleurwit);
+}
+
+dialog :is(input, textarea) {
+
+  background-color: var(--nogdonkerehuiskleurblauw);
+  color: var(--huiskleurwit);
+  border: solid .1em var(--huiskleurwit);
+
+  width: 100%;
+  padding: .7em .7em;
+  appearance: none;
+  font-size: 1em;
+  border-radius: .5em;
+  height: 7em;
+
+  font-family: "amaranthregular";
+}
+
+button[type=submit] {
+  background-color: var(--nogdonkerehuiskleurblauw);
+  color: var(--huiskleurwit);
+  border: solid .1em var(--huiskleurwit);
+
+  border-radius: 10em;
+}
+
+button[type=submit]:hover {
+  border-radius: 10em;
+
+  background-color: var(--huiskleurwit);
+  color: var(--nogdonkerehuiskleurblauw);
+}
+
+section:nth-of-type(5)>button {
+  border-radius: 1.2em;
+  position: fixed;
+  right: var(--whitespace);
+  bottom: var(--whitespace);
+
+
+  width: 5em;
+  aspect-ratio: 1;
+
+  appearance: none;
+
+  background-color: var(--nogdonkerehuiskleurblauw);
+  color: var(--huiskleurwit);
+  font-size: 1em;
+
+  cursor: pointer;
+
+  box-shadow: .1em .1em .2em var(--schaduw);
+}
+
+/* alle buttons */
+button {
+  padding: .5em 1em;
+  background-color: var(--color-background);
+  border-radius: .5em;
+  border: solid var(--color-background);
+
+
+  line-height: 1.25;
+  font-size: 1em;
+
+  font-family: "amaranthregular";
+
+  cursor: pointer;
+}
+
+/* animatie */
+
+main a:hover {
+  animation-name: schalen;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes schalen {
+  0% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.2;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+/* animatie button schalen en draaien, Animatie 360 laten draaien (ChatGPT) Prompt: 
+ik wil dat er maar een keer een hele draai wordt gedaan en dat het woord dan blijft staan en niet terugdraait*/
+
+section:nth-of-type(5)>button:hover {
+  animation-name: schalenbutton;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes schalenbutton {
+  0% {
+    scale: 1;
+    rotate: 0;
+  }
+
+  50% {
+    scale: 1.2;
+    border-radius: 20em;
+    box-shadow: .2em .2em .5em var(--schaduw);
+  }
+
+  100% {
+    scale: 1;
+    rotate: 360deg;
+  }
+}

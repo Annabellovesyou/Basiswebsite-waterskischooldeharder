@@ -26,18 +26,21 @@ html {
     --nogdonkerehuiskleurblauw: #183f7b;
     --gelehuiskleur: #efe417;
     --focuskleur: #122d56;
+    --h3kleur: #79a0d9;
+    --schaduw: #8c8c8c;
 }
 
-/* darkmode */
+/* Darkmode, uitleg: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme */
 
 @media (prefers-color-scheme:dark) {
     :root {
         --color-text: #f4f9ff;
-        --color-background: #163461;
+        --color-background: #152c4d;
         --huiskleurwit: #183f7b;
         --donkerehuiskleurblauw: #f4f9ff;
-        --nogdonkerehuiskleurblauw: #d5e3f8;
-        --focuskleur: #efe417;
+        --nogdonkerehuiskleurblauw: #ffffff;
+        --focuskleur: #f4f9ff;
+        --schaduw: #171717;
     }
 }
 
@@ -56,6 +59,23 @@ html {
 /* STYLING */
 
 /* header */
+
+/* skiplink */
+header>a:first-of-type {
+    position: absolute;
+    left: -1000em;
+    overflow: hidden;
+}
+
+header>a:first-of-type:focus {
+    position: absolute;
+    left: 2em;
+    z-index: 21;
+
+    font-family: "amaranthregular";
+    color: var(--nogdonkerehuiskleurblauw);
+}
+
 
 header {
     display: flex;
@@ -81,7 +101,6 @@ header img {
         max-width: 5em;
         z-index: 11;
     }
-
 }
 
 @media (min-width: 40em) {
@@ -89,7 +108,6 @@ header img {
         max-width: 5em;
         z-index: 13;
     }
-
 }
 
 /* Main en sticky nav */
@@ -156,11 +174,6 @@ nav ul a {
     text-decoration: none;
 
     font-size: .7em;
-}
-
-nav ul a:hover {
-    text-decoration: underline wavy .15em var(--donkerehuiskleurblauw);
-    text-underline-offset: .3em;
 }
 
 ul li {
@@ -242,7 +255,6 @@ header button.is-open {
         position: sticky;
         top: 0;
 
-        padding-left: 4.5em;
         padding-bottom: .5em;
         translate: 0;
         background-color: var(--huiskleurwit);
@@ -250,10 +262,6 @@ header button.is-open {
         display: flex;
         justify-content: center;
         text-transform: uppercase;
-    }
-
-    header {
-        background-color: var(--huiskleurwit);
     }
 }
 
@@ -301,10 +309,6 @@ body p {
     body p {
         font-size: 1em;
     }
-}
-
-section:nth-of-type(2) a:visited {
-    color: var(--nogdonkerehuiskleurblauw);
 }
 
 h1,
@@ -366,7 +370,7 @@ footer {
 }
 
 footer ul {
-    margin-top: 5em;
+    margin-top: 3em;
 }
 
 footer li {
@@ -381,10 +385,11 @@ footer li {
 footer a {
     color: var(--nogdonkerehuiskleurblauw);
     font-family: "amaranthregular";
-    line-height: 2em;
+    line-height: 1em;
     list-style: none;
-    font-size: .9em;
-    text-decoration: none;
+    font-size: 1em;
+    text-decoration: underline;
+    text-underline-offset: .3em;
 }
 
 footer h2 {
@@ -403,19 +408,60 @@ em {
 
 footer a:focus-visible {
     outline: solid .2em var(--donkerehuiskleurblauw);
-    border-radius: .5em;
+    border-radius: .2em;
     outline-offset: .4em;
 }
 
 nav a:focus-visible {
     outline: solid .2em var(--donkerehuiskleurblauw);
-    border-radius: .5em;
+    border-radius: .2em;
     outline-offset: .4em;
 }
 
 :focus-visible {
-    outline: solid .2em var(--focuskleur);
-    border-radius: .5em;
+    outline: solid .2em var(--gelehuiskleur);
+    border-radius: .2em;
     outline-offset: .3em;
 }
 
+section:nth-of-type(2) a:visited {
+    color: var(--nogdonkerehuiskleurblauw);
+}
+
+nav ul a:hover {
+    text-decoration: underline .25em var(--nogdonkerehuiskleurblauw);
+    text-underline-offset: .4em;
+    color: var(--nogdonkerehuiskleurblauw);
+}
+
+button:active {
+    translate: 0 .1em;
+}
+
+.huidig {
+    background-color: var(--color-background);
+    padding: 1em;
+    border-radius: 5em;
+    position: relative;
+    right: 1em;
+}
+
+/* media query om de huidige weer op zijn normale positie te zetten bij groot scherm */
+@media (min-width: 42em) {
+    .huidig {
+        position: static;
+    }
+}
+
+/* uit kunnen zetten door gebruiker, gebruikte bron: https://css-tricks.com/almanac/rules/m/media/prefers-reduced-motion/*/
+
+@media (prefers-reduced-motion: reduce) {
+    main img:last-of-type {
+      animation: none !important;
+      transform: none !important;
+    }
+main button {
+    animation: none !important;
+    transform: none !important;  
+}
+  }
