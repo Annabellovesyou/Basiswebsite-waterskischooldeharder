@@ -186,6 +186,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 - sommige links zijn zonder kleur niet te herkennen op de originele website. Op mijn website heeft (behalve de navigatie) elke link een underlining.
 - op de originele website is de navigatie niet goed leesbaar door kleur contrast. Op mijn website wel, alleen het logo is minder goed zichtbaar bij dark mode.
 
+Toegankelijkheidstest boekje:
+
+  <img src="readme-images/WCAG1.JPG" width="375px" alt="toegankelijkheidstest pagina 1">
+  <img src="readme-images/WCAG2.JPG" width="375px" alt="toegankelijkheidstest pagina 2">
+  <img src="readme-images/WCAG3.JPG" width="375px" alt="toegankelijkheidstest pagina 3">
+  <img src="readme-images/WCAG4.JPG" width="375px" alt="toegankelijkheidstest pagina 4">
+  <img src="readme-images/WCAG5.JPG" width="375px" alt="toegankelijkheidstest pagina ">
 
 
 </details>
