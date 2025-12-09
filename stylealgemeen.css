@@ -1,0 +1,467 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CUSTOM PROPERTIES */
+
+:root {
+    color-scheme: light dark;
+
+    --color-text: #111;
+    --color-background: #eaf1fa;
+    --huiskleurwit: #FFFFFF;
+    --donkerehuiskleurblauw: #2258aa;
+    --nogdonkerehuiskleurblauw: #183f7b;
+    --gelehuiskleur: #efe417;
+    --focuskleur: #122d56;
+    --h3kleur: #79a0d9;
+    --schaduw: #8c8c8c;
+}
+
+/* Darkmode, uitleg: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme */
+
+@media (prefers-color-scheme:dark) {
+    :root {
+        --color-text: #f4f9ff;
+        --color-background: #152c4d;
+        --huiskleurwit: #183f7b;
+        --donkerehuiskleurblauw: #f4f9ff;
+        --nogdonkerehuiskleurblauw: #ffffff;
+        --focuskleur: #f4f9ff;
+        --schaduw: #171717;
+    }
+}
+
+@font-face {
+    font-family: "amaranth";
+    src: url("../fonts/Amaranth-Bold.woff");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "amaranthregular";
+    src: url("../fonts/Amaranth-Regular.woff");
+    font-weight: normal;
+}
+
+/* STYLING */
+
+/* header */
+
+/* skiplink */
+header>a:first-of-type {
+    position: absolute;
+    left: -1000em;
+    overflow: hidden;
+}
+
+header>a:first-of-type:focus {
+    position: absolute;
+    left: 2em;
+    z-index: 21;
+
+    font-family: "amaranthregular";
+    color: var(--nogdonkerehuiskleurblauw);
+}
+
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: var(--huiskleurwit);
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* LOGO */
+header img {
+    max-width: 3.5em;
+    position: relative;
+    right: 1em;
+}
+
+@media (min-width: 20em) {
+    header img {
+        max-width: 5em;
+        z-index: 11;
+    }
+}
+
+@media (min-width: 40em) {
+    header img {
+        max-width: 5em;
+        z-index: 13;
+    }
+}
+
+/* Main en sticky nav */
+
+main {
+    padding-inline: 1.5em;
+    background-image: url("../images/horizontaaltubefun2.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-top: 40vw;
+}
+
+@media (min-width: 40em) {
+    main {
+        padding-inline: 2em;
+    }
+}
+
+main p {
+    margin-bottom: 5em;
+    max-width: 54rem;
+}
+
+main section {
+    margin-bottom: 5em;
+}
+
+nav ul {
+    position: sticky;
+    top: 0;
+}
+
+/* Hamburger menu*/
+
+nav {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    background-color: var(--huiskleurwit);
+    translate: -100% 0;
+    transition: .5s;
+
+    z-index: 12;
+}
+
+nav.is-open {
+    translate: 0 0;
+    font-size: 1.5em;
+    line-height: 2em;
+}
+
+/* Styling van de a'tjes */
+
+nav ul a {
+    font-family: "amaranth";
+    letter-spacing: .02em;
+    color: var(--donkerehuiskleurblauw);
+    text-decoration: none;
+
+    font-size: .7em;
+}
+
+ul li {
+    list-style: none;
+}
+
+/* Button styling als hij zichtbaar is */
+
+header button {
+    appearance: none;
+
+    width: 2.5em;
+    aspect-ratio: 1/1;
+
+    background-color: var(--huiskleurwit);
+    border: none;
+    border-radius: .5em;
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding: 0;
+
+    position: relative;
+    z-index: 20;
+    cursor: pointer;
+}
+
+header button span {
+    display: block;
+
+    width: 1.5em;
+    height: 0.22em;
+    background-color: var(--donkerehuiskleurblauw);
+    border-radius: 1em;
+
+    grid-row-start: 1;
+    grid-column-start: 1;
+
+    transition: .2s;
+}
+
+header button span:nth-of-type(1) {
+    translate: 0 -0.45em;
+}
+
+header button span:nth-of-type(3) {
+    translate: 0 0.45em;
+}
+
+/* Button styling als er op wordt geklikt */
+
+header button.is-open span:nth-of-type(1) {
+    translate: 0 0;
+    rotate: 45deg;
+}
+
+header button.is-open span:nth-of-type(2) {
+    scale: 0 1;
+}
+
+header button.is-open span:nth-of-type(3) {
+    translate: 0 0;
+    rotate: -45deg;
+}
+
+header button.is-open {
+    background-color: var(--huiskleurwit);
+}
+
+/* HEADER @MEDIA */
+
+@media (min-width: 48em) {
+    header button {
+        display: none;
+    }
+
+    header nav {
+        position: sticky;
+        top: 0;
+
+        padding-bottom: .5em;
+        translate: 0;
+        background-color: var(--huiskleurwit);
+        font-size: 1em;
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+    }
+}
+
+@media (min-width: 42em) and (max-width: 60em) {
+    header nav ul {
+        display: flex;
+        justify-content: center;
+        font-size: 1.3em;
+        gap: 2.2em;
+    }
+}
+
+@media (min-width: 60em) {
+    header nav ul {
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.4em;
+        gap: 3em;
+        margin-top: 1em;
+    }
+}
+
+@media (min-width: 70em) {
+    header nav ul {
+        font-size: 1.4em;
+    }
+}
+
+/* Body & Headings */
+
+body {
+    font-family: "huistypografietekst";
+    background-color: var(--color-background);
+}
+
+body p {
+    font-size: .9em;
+    line-height: 1.5em;
+    text-align: left;
+    font-family: "amaranthregular";
+    margin-bottom: 0;
+}
+
+@media (min-width: 42em) {
+    body p {
+        font-size: 1em;
+    }
+}
+
+h1,
+h2 {
+    font-family: "amaranth";
+    color: var(--donkerehuiskleurblauw);
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+@media (min-width: 42em) {
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+
+@media (min-width: 60em) {
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    footer h2 {
+        font-size: 2em;
+    }
+}
+
+/* footer */
+
+footer {
+    background-color: var(--huiskleurwit);
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5em;
+    justify-content: flex-start;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+@media (min-width: 42em) {
+    footer {
+        display: flex;
+        justify-content: center;
+        font-size: 1.2em;
+    }
+}
+
+footer ul {
+    margin-top: 3em;
+}
+
+footer li {
+    color: var(--nogdonkerehuiskleurblauw);
+    font-family: "amaranthregular";
+    line-height: 2em;
+    list-style: none;
+    font-size: 0.7em;
+    text-decoration: none;
+}
+
+footer a {
+    color: var(--nogdonkerehuiskleurblauw);
+    font-family: "amaranthregular";
+    line-height: 1em;
+    list-style: none;
+    font-size: 1em;
+    text-decoration: underline;
+    text-underline-offset: .3em;
+}
+
+footer h2 {
+    font-family: "Amaranth";
+    color: var(--donkerehuiskleurblauw);
+    font-size: 1.5em;
+}
+
+
+em {
+    color: var(--gelehuiskleur);
+    font-style: normal;
+}
+
+/* TOEGANKELIJKHEID */
+
+footer a:focus-visible {
+    outline: solid .2em var(--donkerehuiskleurblauw);
+    border-radius: .2em;
+    outline-offset: .4em;
+}
+
+nav a:focus-visible {
+    outline: solid .2em var(--donkerehuiskleurblauw);
+    border-radius: .2em;
+    outline-offset: .4em;
+}
+
+:focus-visible {
+    outline: solid .2em var(--gelehuiskleur);
+    border-radius: .2em;
+    outline-offset: .3em;
+}
+
+section:nth-of-type(2) a:visited {
+    color: var(--nogdonkerehuiskleurblauw);
+}
+
+nav ul a:hover {
+    text-decoration: underline .25em var(--nogdonkerehuiskleurblauw);
+    text-underline-offset: .4em;
+    color: var(--nogdonkerehuiskleurblauw);
+}
+
+button:active {
+    translate: 0 .1em;
+}
+
+.huidig {
+    background-color: var(--color-background);
+    padding: 1em;
+    border-radius: 5em;
+    position: relative;
+    right: 1em;
+}
+
+/* media query om de huidige weer op zijn normale positie te zetten bij groot scherm */
+@media (min-width: 42em) {
+    .huidig {
+        position: static;
+    }
+}
+
+/* uit kunnen zetten door gebruiker, gebruikte bron: https://css-tricks.com/almanac/rules/m/media/prefers-reduced-motion/*/
+
+@media (prefers-reduced-motion: reduce) {
+    main img:last-of-type {
+      animation: none !important;
+      transform: none !important;
+    }
+main button {
+    animation: none !important;
+    transform: none !important;  
+}
+  }

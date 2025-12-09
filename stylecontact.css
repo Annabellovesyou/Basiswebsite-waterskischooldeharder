@@ -1,0 +1,217 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+
+/* STYLING */
+
+section:nth-of-type(2) h2 {
+  font-size: 1em;
+}
+
+@media (min-width: 25em) {
+  section:nth-of-type(2) h2 {
+    font-size: 1.5em;
+  }
+}
+
+main section:nth-of-type(1) {
+  max-width: 55rem;
+  margin-inline: auto;
+}
+
+main ul {
+  font-family: "amaranthregular";
+  font-size: .8em;
+}
+
+main ul a {
+  font-size: .7em;
+}
+
+@media (min-width: 25em) {
+  main ul {
+    font-size: 1em;
+  }
+  main ul a {
+    font-size: .9em;
+  }
+}
+
+@media (min-width: 60em) {
+  main ul {
+    font-size: 1.2em;
+  }
+}
+
+main ul li {
+  list-style: square;
+  line-height: 1.8em;
+}
+
+/* formulier */
+
+label {
+  line-height: 2em;
+  font-family: "amaranthregular";
+  color: var(--nogdonkerehuiskleurblauw);
+}
+
+input {
+  width: 10.5em;
+  padding: .5em;
+  margin-bottom: 1.5em;
+  font-size: .9em;
+  font-family: "amaranthregular";
+  box-sizing: border-box;
+  border: .04em solid var(--nogdonkerehuiskleurblauw);
+  border-radius: .3em;
+
+  background-color: var(--huiskleurwit);
+}
+
+form {
+  width: 10em;
+  margin: 0 auto;
+  font-size: .9em;
+}
+
+textarea {
+  width: 10em;
+  border: 0.05em solid var(--nogdonkerehuiskleurblauw);
+  border-radius: .3em;
+  background-color: var(--huiskleurwit);
+  
+  font-family: "amaranthregular";
+
+  resize: none;
+
+  margin-bottom: 3em;
+}
+
+section:nth-of-type(2) label {
+  font-size: 1em;
+}
+
+@media (min-width:25em) {
+  input {
+    width: 15em;
+    padding: .5em;
+    font-size: 1.1em;
+    }
+  
+    textarea {
+      width: 19.5em;
+      border: 0.05em solid var(--nogdonkerehuiskleurblauw);
+    }
+  
+    form {
+      width:16em;
+      margin: 0 auto;
+      font-size: 1em;
+    } 
+}
+
+@media (min-width: 35em) {
+  input {
+  width: 20em;
+  padding: .6em;
+  font-size: 1.1em;
+  }
+
+  textarea {
+    width: 26.4em;
+  }
+
+  form {
+    width:20em;
+    margin: 0 auto;
+    font-size: 1em;
+  }
+
+}
+
+input[type=submit] {
+ background-color: var(--color-background);
+ color: var(--nogdonkerehuiskleurblauw);
+ border: solid .1em var(--nogdonkerehuiskleurblauw);
+
+ border-radius: 10em;
+}
+
+input[type=reset] {
+  background-color: var(--color-background);
+  color: var(--nogdonkerehuiskleurblauw);
+  border: solid .1em var(--nogdonkerehuiskleurblauw);
+
+  border-radius: 10em;
+ }
+
+input[type=submit]:hover {
+  background-color: var(--donkerehuiskleurblauw);
+  color: var(--huiskleurwit);
+  cursor: pointer;
+}
+
+input[type=reset]:hover {
+  background-color: var(--donkerehuiskleurblauw);
+  color: var(--huiskleurwit);
+  cursor: pointer;
+}
+
+input[type=submit]:active {
+  translate: 0 .2em;
+}
+
+input[type=reset]:active {
+  translate: 0 .2em;
+}
+
+main a {
+  text-underline-offset: .2em;
+  color: var(--nogdonkerehuiskleurblauw);
+}
+
+
+/* animatie */
+
+main img:last-of-type {
+  padding-top: 1em;
+  width: 8em;
+  position: relative;
+  animation-name: boot;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes boot {
+  0% {
+    transform: translateX(100vw); /* buiten het scherm rechts */
+  }
+  100% {
+    transform: translateX(-50vw); /* gaat weer naar links */
+  }
+}
+
+@media (min-width:25em) {
+  main img:last-of-type {
+    animation-duration: 8s;
+    width: 15em;
+  } 
+}
+
+@media (min-width:40em) {
+  main img:last-of-type {
+    animation-duration: 12s;
+    width: 20em;
+  } 
+}
+
+@media (min-width:60em) {
+  main img:last-of-type {
+    animation-duration: 13s;
+    width: 25em;
+  } 
+}
