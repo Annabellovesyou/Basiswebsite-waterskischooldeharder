@@ -165,12 +165,30 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+ Tijdens de tweede test merkte ik dat:
+ - ik nog een animatie moest toevoegen.
+ - mijn links nog niet allemaal te onderscheiden waren zonder kleur.
+ - de skiplink niet zichtbaar werd bij focus.
+
+
+  Verbeteringen:
+- De beschrijvingen van links en buttons waren onduidelijk en lang. Op mijn website hebben ze duidelijke benamingen.
+- Mijn html bevat geen fouten, enkel warnings over sections zonder headings.
+- De tab op mijn website bevat dezelfde volgorde als de lay-out.
+- de knoppen en tekstvelden op de originele website zaten dicht op elkaar en waren klein. Op mijn wesbite hebben ze genoeg ruimte en zijn ze goed klikbaar.
+- Mijn website heeft op elke pagina een H1 en een juiste volgorde.
+- de originele website heeft veel div's en classes/id's. Mijn website niet.
+- Op de originele website heeft niet elke image een alt tekst, mijn website wel. 
+- De originele website heeft geen alt tekst bij de tabellen. Mijn website heeft captions die worden voorgelezen door sr.
+- De originele website heeft geen caption bij de video's. Mijn website heeft een heading boven de video.
+- Mijn website heeft een skiplink die onzichtbaar is, tenzij je er op focust met tab.
+- originele website heeft geen darkmode, mijn website wel.
+- sommige links zijn zonder kleur niet te herkennen op de originele website. Op mijn website heeft (behalve de navigatie) elke link een underlining.
+- op de originele website is de navigatie niet goed leesbaar door kleur contrast. Op mijn website wel, alleen het logo is minder goed zichtbaar bij dark mode.
+
+
 
 </details>
-
-
-
 
 
 ## Voortgang 3 (week 4)
@@ -205,15 +223,10 @@ Ik moet nu nog mijn code dubbel checken of het allemaal goed is, ik moet nog de 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+- het veranderen van de kleur van de laatste tabel rij laten gaan, en focussen op de 'boeken' knop op twee pagina's.
+- De 'boek' knop werkt nog niet op de tarieven pagina. Maak een nieuwe Javascript document.
 
 </details>
-
-
-
 
 
 ## Eindgesprek (week 5)
@@ -222,22 +235,38 @@ Ik moet nu nog mijn code dubbel checken of het allemaal goed is, ik moet nog de 
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
-
+  <img src="readme-images/index.png" width="375px" alt="Index pagina">
+  <img src="readme-images/tarieven.png" width="375px" alt="Tarieven pagina">
+  <img src="readme-images/contact.png" width="375px" alt="Contact pagina">
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+Ik heb geleerd hoe ik een tabel en een formulier kan maken. Dit is niet in de les behandeld (waar ik aanwezig was), dus ik heb het zelf opgezocht op betrouwbare websites. Ik ben erg tevreden met de uitkomst. In de eerste afbeelding staat het formulier en in de tweede afbeelding de tabel.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+In de derde afbeelding zie je de dialog die ik heb overgenomen van een van de lesopdrachten. Het was wel lastig om hem op meerdere pagina's te laten werken.
+
+Ik was heel tevreden met hoe de kaarten eruit zagen. Ik vind het alleen niet zo mooi als de website scherm formaat is, dan verpringt het een beetje.
+
+<img src="readme-images/formulier.png" width="375px" alt="Contact formulier">
+<img src="readme-images/tabel.png width="375px" alt="Tabel">
+<img src="readme-images/boekenknop.png" width="375px" alt="boeken dialog">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+ Ik wilde graag de tabel exact namaken, dus ook de laatste rij volledig blauw maken, maar dit lukte niet. Ik kreeg wel de laatste tijd blauw, maar niet de laatste kolom. Ik heb heel veel geprobeerd maar niks werkte. Ik heb er later voor gekozen om het weg te laten en dezelfde 'boek' knop te gebruiken als op de homepagina. Dit was ook niet makkelijk want die javascript code kon niet in 1 bestand. Dit kwam omdat ik ook nog javascript code heb voor de video op de home pagina. Ik heb geen video op mijn andere pagina's dus mijn browser raakte denk ik in de war. Ik heb daarom twee javascript bestanden aangemaakt en toen deed alles het weer.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+ Ook had ik moeite met het hamburger menu en alle andere javascript elementen. De ene keer deden mijn functies het wel en de andere keer niet. Ik wist daardoor niet of het aan mijn code lag of aan de browser. Ik hoop daarom dat alles het wel gewoon doet tijdens het eindassessment.
+
+ Wat niet is gelukt is dus die 'boeken' knop op elke pagina te plaatsen, dan moest ik drie javascript pagina's maken, en ik wist niet of twee bestanden uberhaubt was toegestaan. Ik heb de knop nu op de belangrijkste pagina's staan.
+
+Wat ook niet is gelukt is een deel van mijn hamburger menu. Wanneer ik mijn hamburger menu uitklap en mijn scherm verbreed, dan gaat het menu mee en wordt het heel groot. Ik wist niet hoe ik dit moest oplossen. Bekijk de tweede afbeelding.
+
+Op de contact pagina heb ik ook een link staan naar een e-mail adres, maar als het scherm heell klein wordt dan moet het adres ook heel klein worden anders gaat hij van het scherm af. Ik wist niet hoe ik dit moest oplossen.
+
+Tenslotte had ik nog wat problemen met mijn dialog. In mijn css staat dubbel styling voor een button, maar als ik het ene weghaal, verdwijnt het ook bij een andere button. Ik heb dingen geprobeerd zoals code samenvoegen maar dan gaat het allemaal stuk. Ik heb het maar laten gaan. Op deze manier werkt het, en ik snap het wel voor 70%.
+
+  <img src="readme-images/tarievenoriginelewebsite.png" width="375px" alt="tabel van originele pagina">
+  <img src="readme-images/grotenavigatiebar.png" width="375px" alt="te grote nav bar">
 </details>
-
-
 
 
 
@@ -246,12 +275,13 @@ Ik moet nu nog mijn code dubbel checken of het allemaal goed is, ik moet nog de 
 <details open>
   <summary>continu bijhouden terwijl je werkt</summary>
 
-  Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg). 
-  Nb. ChatGpT en andere AI horen er ook bij.
-  Nb. Vermeld de bronnen ook in je code.
-
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. Captions voor de tabel: https://www.w3schools.com/tags/tag_caption.asp
+  2. Prefers-reduced-motion: uitleg: https://css-tricks.com/almanac/rules/m/media/prefers-reduced-motion/
+  3. Uitleg over linear gradient kleur (ChatGPT) Prompt: kan je dit uitleggen: background: linear-gradient(-45deg, var(--nogdonkerehuiskleurblauw), var(--donkerehuiskleurblauw))
+  4. Animatie 360 laten draaien (ChatGPT) Prompt: ik wil dat er maar een keer een hele draai wordt gedaan en dat het woord dan blijft staan en niet terugdraait: @keyframes schalen { /* jouw code hier */ 0% { transform: rotate(0deg); } 50%{ transform: rotate(360deg); } 100%{ transform: rotate(0deg); } }
+  5. Hoe tabel stylen: https://www.w3schools.com/css/css_table.asp
+  6. Hoe tabel in html: https://www.w3schools.com/html/html_tables.asp
+  7. Codepen opdracht dialog: https://codepen.io/Annabellovesyou/pen/jEqpGpM
+  8. prefers-color-scheme uitleg: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme
 
 </details>
